@@ -111,17 +111,18 @@
 
 ## TASK-007: Onboarding flow
 
-**Status:** pending
-**Owner:** unassigned
+**Status:** complete
+**Owner:** product-lead
 **Priority:** high
+**Documentation:** docs/onboarding-flow-spec.md
 
 ### Acceptance Criteria
-- [ ] Welcome screen with Libresse branding
-- [ ] Privacy explainer screen ("How we handle your data")
-- [ ] Cycle setup screen (last period date, typical cycle length)
-- [ ] Option to skip cycle setup ("I'll set this up later")
-- [ ] Onboarding only shows once (persisted completion state)
-- [ ] Graceful degradation on Home if cycle not set up
+- [x] Welcome screen with Libresse branding
+- [x] Privacy explainer screen ("How we handle your data")
+- [x] Cycle setup screen (last period date, typical cycle length)
+- [x] Option to skip cycle setup ("I'll set this up later")
+- [x] Onboarding only shows once (persisted completion state)
+- [x] Graceful degradation on Home if cycle not set up
 
 ---
 
