@@ -11,17 +11,17 @@
 
 ## TASK-001: Project setup
 
-**Status:** pending
-**Owner:** unassigned
+**Status:** done
+**Owner:** claude
 **Priority:** high
 
 ### Acceptance Criteria
-- [ ] Tech stack decided and documented in root CLAUDE.md
-- [ ] Development environment configured (React Native or Flutter)
-- [ ] CI/CD pipeline set up
-- [ ] All team members can build and run locally
-- [ ] ESLint/Prettier or equivalent linting configured
-- [ ] Basic folder structure established
+- [x] Tech stack decided and documented in root CLAUDE.md
+- [x] Development environment configured (React Native or Flutter)
+- [x] CI/CD pipeline set up
+- [x] All team members can build and run locally
+- [x] ESLint/Prettier or equivalent linting configured
+- [x] Basic folder structure established
 
 ---
 
