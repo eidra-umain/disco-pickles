@@ -16,62 +16,134 @@ This skill handles the full Git + GitHub lifecycle: branching, committing, pushi
 
 These operations are for users who don't know Git. When they use casual language like "save my work", "sync", "backup", or "share progress", use these simplified workflows. **Always explain what you're doing in plain language** — avoid Git jargon unless explaining it.
 
+### Step 0: Check Project Rules First
+
+**Before any save/sync/share operation**, check if this project has specific Git rules. This prevents accidentally violating project conventions.
+
+```bash
+# Check for project-specific Git rules
+cat CLAUDE.md 2>/dev/null | grep -iE "(push|PR|pull request|branch|main|master)" | head -10
+cat CONTRIBUTING.md 2>/dev/null | grep -iE "(push|PR|pull request|branch|main|master)" | head -10
+cat .github/CONTRIBUTING.md 2>/dev/null | grep -iE "(push|PR|pull request|branch|main|master)" | head -10
+```
+
+Look for phrases like:
+- "no direct pushes to main"
+- "always create PRs"
+- "require pull request"
+- "branch naming: ..."
+
+**Store this context** and use it to decide:
+- `requires_pr`: true if direct pushes to main/master are forbidden
+- `branch_convention`: the naming pattern if one exists (e.g., `feature/TASK-XXX-description`)
+
+If no rules are found, assume direct push is allowed (simpler for beginners on personal projects).
+
 ### Save My Work / Sync to Cloud
 
 When the user says things like "save my work", "sync", "backup to cloud", "upload my changes", or "save to GitHub":
 
-1. First, check what's changed and the current state:
+1. **Run Step 0** to check project rules first.
+
+2. Check what's changed and the current state:
    ```bash
    git status
-   git log --oneline -1  # see where we are
+   git branch --show-current
+   git log --oneline -1
    ```
 
-2. If there are changes to save, explain what files changed in plain terms:
+3. If there are changes to save, explain what files changed in plain terms:
    > "I found 3 files you've changed: `app.py`, `README.md`, and a new file `config.json`. I'll save these to the cloud."
 
-3. Save everything (stage and commit):
+4. **Determine if branching is needed:**
+
+   **If on main/master AND `requires_pr` is true:**
+   
+   Create a branch automatically before saving:
+   ```bash
+   # Generate branch name: save/<date>-<brief-description>
+   git checkout -b save/$(date +%Y-%m-%d)-<brief-description-of-changes>
+   ```
+   
+   Explain to the user:
+   > "This project requires changes to go through review before they're added to the main project. I'll save your work on a separate branch so you don't lose anything."
+
+   **If already on a feature branch OR `requires_pr` is false:**
+   
+   Continue without creating a new branch.
+
+5. Save everything (stage and commit):
    ```bash
    git add -A
    git commit -m "Save progress: <brief description of what changed>"
    ```
    Use a simple, descriptive message. If task IDs are used in the repo, include them.
 
-4. Upload to the cloud:
+6. Upload to the cloud:
    ```bash
-   git push
+   git push -u origin $(git branch --show-current)
    ```
 
-5. If push fails due to remote changes, pull first and retry:
+7. If push fails due to remote changes, pull first and retry:
    ```bash
    git pull --rebase
    git push
    ```
 
-6. Confirm success in plain language:
+8. Confirm success in plain language:
+
+   **If on main (and direct push allowed):**
    > "Done! Your work is now saved to the cloud. Anyone with access to this project can see your latest changes."
+
+   **If on a branch (because PRs are required):**
+   > "Done! Your work is saved to the cloud on a separate branch. When you're ready to share it with the team, just say 'share my progress' and I'll create a review request."
 
 ### Share My Progress / Let Others See My Work
 
 When the user wants to share their work or let teammates see what they've done:
 
-1. First, save any unsaved work (use the "Save My Work" flow above)
+1. **Run Step 0** to check project rules first.
 
-2. Check if we're on a branch or main:
+2. First, save any unsaved work (use the "Save My Work" flow above, which will handle branching if needed)
+
+3. Check if we're on a branch or main:
    ```bash
    git branch --show-current
    ```
 
-3. **If on main**: Their work is already visible after pushing. Explain:
+4. **If on main AND `requires_pr` is true:**
+
+   Don't push to main. Instead, create a branch and PR:
+   ```bash
+   # Create branch for sharing
+   git checkout -b save/$(date +%Y-%m-%d)-<brief-description>
+   git push -u origin $(git branch --show-current)
+   
+   # Create PR
+   gh pr create --title "Work in progress: <description>" --body "Sharing my progress for feedback."
+   ```
+   
+   Explain:
+   > "This project requires changes to be reviewed before adding to the main project. I've created a review request so your teammates can see your work and leave comments."
+   
+   Provide the PR link.
+
+5. **If on main AND `requires_pr` is false:**
+
+   Their work is already visible after pushing. Explain:
    > "Your changes are now on the main project. Everyone with access can see them!"
 
-4. **If on a branch**: Offer to create a Pull Request so others can review:
+6. **If already on a branch:**
+
+   Push the branch and offer to create a Pull Request:
    ```bash
+   git push -u origin $(git branch --show-current)
    gh pr create --title "Work in progress: <description>" --body "Sharing my progress for feedback."
    ```
    Then provide the PR link:
    > "I've created a link you can share: <PR URL>. Others can see your work and leave comments there."
 
-5. If they just want a quick link to share (no PR needed):
+7. If they just want a quick link to share (no PR needed):
    ```bash
    # Get the repo URL and current branch
    gh repo view --json url -q '.url'
