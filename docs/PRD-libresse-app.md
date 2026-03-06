@@ -13,30 +13,49 @@
 
 ## 1. Executive Summary
 
-Libresse is building a privacy-first period tracking and commerce app for Gen Z women (16–25). The app replaces the broken incumbents — led by Flo, which was fined $56M for data privacy violations — with a cycle-phase-aware experience that combines on-device health tracking, an AI health assistant, and context-aware product commerce. Unlike competitors that monetize user data, Libresse's revenue comes from product sales, aligning user trust with business incentives. The prototype validates whether a cycle-rhythm-driven UX, intelligent health guidance, and integrated product commerce can capture a disillusioned market worth $2.5B and growing at 20% CAGR.
+Libresse is building a privacy-first period tracking and commerce app for Gen Z women (16–25). The app replaces the broken incumbents — led by Flo, which faced both an FTC enforcement action (2021, behavioral remedies) and a $56M class action settlement (2024–2025, with Google paying $48M and Flo paying $8M) for sharing intimate health data with Facebook, Google, and others — with a cycle-phase-aware experience that combines on-device health tracking, an AI health assistant, and context-aware product commerce. Unlike competitors that monetize user data, Libresse's revenue comes from product sales, aligning user trust with business incentives. The prototype validates whether a cycle-rhythm-driven UX, intelligent health guidance, and integrated product commerce can capture a disillusioned market worth $2.5B and growing at 20% CAGR.
 
 ---
 
 ## 2. Problem Statement
 
-**Who:** Gen Z women aged 16–25 who menstruate and use smartphones as their primary device. This includes the "Everyday User" (currently using Flo, Clue, or Apple Health and dissatisfied) and the "Loyal Libresse Customer" (already buys Libresse products and is open to a digital relationship).
+**Who:** Gen Z women aged 16–25 who menstruate and use smartphones as their primary device. This is the most mobile-native demographic: ~4.5 hours daily screen time, 80–100+ phone unlocks per day, with usage dominated by short "snacking" sessions peaking midday and 8pm–midnight. Health & wellness apps rank 5th in their usage hierarchy (behind social media, messaging, entertainment, and shopping). This includes the "Everyday User" (currently using Flo, Clue, or Apple Health and dissatisfied) and the "Loyal Libresse Customer" (already buys Libresse products and is open to a digital relationship).
 
 **What they're trying to do:** Track their menstrual cycle, understand why they feel the way they do on any given day, and manage the recurring cost and logistics of menstrual products — without sacrificing their privacy or paying a premium for basic functionality.
 
-**Where they get stuck:**
+**Where they get stuck (ranked by severity):**
 
-- **Privacy fear:** 25–30% of women considered deleting period tracking apps post-Dobbs. Flo shared intimate health data with Facebook, Google, and others. Trust is shattered.
-- **Aggressive paywalls:** The #1 complaint across the category. Users describe being prompted to subscribe "after every action." Basic tracking is being walled off.
-- **No intelligence:** Apps collect symptoms but deliver minimal insight. Users want "why do I feel like this?" not just "your period is in 5 days."
-- **No product connection:** No tracker links cycle data to the menstrual products users actually need. Recommendations, cost tracking, and auto-replenishment don't exist.
-- **Infantilizing design:** Pink flowers, butterflies, and heteronormative assumptions alienate a large segment of the audience.
+*Critical — app-killing issues:*
+
+- **Privacy fear:** 25–30% of women considered deleting period tracking apps post-Dobbs. Flo shared intimate health data (pregnancy status, menstrual cycles, sexual activity, contraceptive methods) with Facebook, Google Analytics, AppsFlyer, and Flurry. In August 2025, a federal jury found Meta itself violated California law by collecting this data. 60–65% of Gen Z are concerned about how companies use data; 35% have stopped using a service due to privacy concerns — the highest of any generation. Post-Dobbs, the fear that cycle data could be subpoenaed is real and documented.
+- **Aggressive paywalls:** The #1 complaint across the category. Users describe being prompted to subscribe "after every action." Clue users dropped ratings from 5 to 3 stars citing paywall frustration. ~50% of Gen Z feel they're paying for too many subscriptions; 60–65% prefer free, ad-supported apps over paid. Free trials that auto-convert are deeply mistrusted.
+- **Prediction inaccuracy:** Apps assume ~28-day cycles and adjust slowly. For the large population with irregular cycles (PCOS, thyroid, perimenopause, stress, birth control), predictions are often wrong by a week+. Ovulation estimates presented with false confidence.
+
+*High — significant friction:*
+
+- **Unwanted pregnancy/fertility content:** Childfree users frustrated by conception tips. Users post-miscarriage served "your baby is the size of..." content. LGBTQ+ users alienated by heteronormative assumptions. Switching modes is difficult and emotionally traumatic.
+- **UI clutter and content overload:** Apps that started as trackers became content platforms. Core function buried under articles, forums, quizzes, promotions. Users want to "just log my period and see the prediction."
+- **Infantilizing design:** Pink flowers, butterflies, and cutesy language alienate a large segment. Trans men and nonbinary users feel excluded. UW study: one of the biggest complaints was "the use of pink, flowery iconography."
+
+*Moderate — cumulative frustration:*
+
+- **No intelligence:** Apps collect symptoms but deliver minimal insight. Users want "why do I feel like this?" not just "your period is in 5 days." The #1 unmet need is understanding, not tracking.
+- **No product connection:** No tracker links cycle data to the menstrual products users actually need. Recommendations, cost tracking, and auto-replenishment don't exist. Menstrual products are a ~€100–120/year expense that feels invisible but adds up.
+- **Data portability:** Switching apps means losing years of data. No standard format. Data held hostage as a retention mechanism.
+
+**The Fundamental Paradox:** Users simultaneously want simplicity ("just let me log and see predictions"), depth ("tell me WHY I feel this way"), privacy ("don't store my data in the cloud"), and intelligence ("use AI to give me personalized insights"). Solving this tension — simple surface, intelligent depth, private architecture — is the central design challenge.
 
 **Evidence:**
 
-- Flo's FTC fine of $56M and 1.6-star rating (despite 380M+ downloads)
-- Clue users dropped ratings from 5 to 3 stars citing paywall frustration
+- Flo: FTC enforcement action (2021) + $56M class action settlement (2024–2025) + Meta found liable by federal jury (August 2025). 380M+ downloads, 1.6-star rating.
+- Clue users dropped ratings from 5 to 3 stars citing paywall frustration. Financial struggles reported.
+- Stardust: post-Dobbs privacy marketing, but claims debunked by security researchers.
+- Ovia: free but employer-subsidized — employers may access reproductive health data.
 - 84% of women feel "unheard" in healthcare settings (femtech research)
 - r/periods most common question: "What app should I use?" — no consensus answer exists
+- r/PCOS: "Period trackers are practically useless for us." Want symptom tracking, not cycle predictions.
+- r/endometriosis: Need pain by body location, non-period symptoms, exportable reports for surgeons.
+- r/birthcontrol: "Apps don't understand hormonal BC." Withdrawal bleeds ≠ periods. IUD users abandoned.
 - Only 4% of healthcare R&D addresses women's health directly
 
 **Cost of inaction:** Libresse has no owned digital touchpoint with end users. The relationship ends at the retail shelf. Meanwhile, tech companies capture and monetize menstrual health data that Libresse could use to serve customers better. If a competitor (or a well-funded femtech startup) fills the trust gap first, Libresse loses the opportunity to own the direct customer relationship in a $13B addressable market (projected 2035).
@@ -98,6 +117,20 @@ Libresse is building a privacy-first period tracking and commerce app for Gen Z 
 > **As a** subscriber, **I want to** auto-replenish my products timed to my actual cycle **so that** I never run out mid-period.
 
 > **As a** woman experiencing recurring PMS symptoms, **I want to** ask an AI health assistant "why do I get migraines before my period?" **so that** I get a plain-language, evidence-based answer.
+
+### Unmet User Needs (from UX Research)
+
+The fundamental question users are trying to answer is not "when is my next period?" but **"is what I'm experiencing normal?"**
+
+| Need | Current State | Opportunity |
+|------|--------------|-------------|
+| Symptom pattern recognition | Apps log symptoms but don't analyze correlations | AI that connects migraines to luteal phase, anxiety to PMS, acne to hormonal shifts |
+| Health education | Generic articles behind paywalls | Phase-specific education: "Here's what's happening in your body RIGHT NOW and why" |
+| Pain management | "Try yoga" — not helpful | Track what actually works: "400mg ibuprofen at onset reduced cramps from 8/10 to 3/10" |
+| Product recommendations | Non-existent in trackers | "Your flow data suggests super-absorbency for days 1–2, switching to regular by day 4" |
+| Cycle-informed life planning | Not addressed | "Your energy peaks next week — good time for that big presentation" |
+| Doctor-ready reports | Manual data export at best | Clean, shareable summary with cycle lengths, symptom patterns, flow intensity |
+| Cost tracking | Non-existent | "You spend ~€120/year on menstrual products. Here's how to optimize." |
 
 ### Key Scenarios
 
@@ -212,6 +245,19 @@ Libresse is building a privacy-first period tracking and commerce app for Gen Z 
 | FR-O02 | Minimal onboarding flow | P0 | ≤3 screens. Collect: approximate cycle length, date of last period. Skip option for everything. Complete in ≤60 seconds. |
 | FR-O03 | Optional account for commerce features | P1 | Account creation required only for Shop/subscription. Clearly scoped: "Sign up to shop — your health data stays on your device regardless." |
 | FR-O04 | Notification preferences during onboarding | P1 | Default: all notifications OFF. User opts in to specific categories. No pre-checked boxes. |
+| FR-O05 | Data import from competing apps | P2 | Support importing cycle history from Flo, Clue, and Apple Health to reduce switching friction. |
+
+### 5.7 Notifications
+
+Research context: 40–50% of Gen Z have turned off notifications for most apps. 50–60% have **uninstalled an app** because of annoying notifications. Gen Z is 2x more likely than older generations to disable notifications within the first week.
+
+| ID | Requirement | Priority | Acceptance Criteria |
+|----|-------------|----------|---------------------|
+| FR-N01 | Maximum 1 notification per day from non-messaging interactions | P0 | System enforces a daily cap. No stacking of multiple notifications. |
+| FR-N02 | All notifications default to OFF | P0 | Zero notifications sent until user explicitly opts in per category. |
+| FR-N03 | Every notification must be actionable | P0 | Each notification passes the test: "Would the user thank the app for telling them this?" No generic promotional blasts, guilt-tripping, or vague teasers. |
+| FR-N04 | Permitted notification types | P0 | Only: period prediction reminders, pattern insights ("You logged migraines 3 cycles in a row"), subscription shipment updates, and pre-period replenishment prompts. |
+| FR-N05 | Prohibited notification types | P0 | Never send: generic content promotions, re-engagement guilt ("You haven't logged in X days"), feature announcements, or mass-blast messages. |
 
 ### 5.6 Widget
 
@@ -289,11 +335,22 @@ Libresse is building a privacy-first period tracking and commerce app for Gen Z 
 
 ### Design Principles
 
-1. **Cycle-first, not feature-first.** The app adapts to where the user is in their cycle. The phase determines the content, tone, and recommendations — not a static nav structure.
-2. **Privacy is visible.** Not buried in settings. The home screen communicates data safety at all times.
-3. **Speed over spectacle.** Every interaction must feel instant. Skeleton screens over spinners. No loading walls.
-4. **Warm minimalism.** Clean layouts with personality — soft palettes, rounded corners, gentle gradients. "Cozy tech" not cold clinical.
+1. **Cycle-first, not feature-first.** The app adapts to where the user is in their cycle. The phase determines the content, tone, and recommendations — not a static nav structure. 71% of Gen Z expect personalization as baseline; cycle-phase personalization is a natural extension.
+2. **Privacy is visible.** Not buried in settings. The home screen communicates data safety at all times. Research shows 75%+ of users should be able to articulate how their data is protected after 1 minute of use.
+3. **Speed over spectacle.** Every interaction must feel instant. Skeleton screens over spinners. No loading walls. Speed is the #1 UX factor for Gen Z — perceived lag is a dealbreaker.
+4. **Warm minimalism.** Clean layouts with personality — "cozy tech" not cold clinical. Research-backed aesthetic: soft, muted palettes (sage greens, dusty roses, lavender, warm cream), subtle organic gradients, rounded corners, generous whitespace with playful moments (illustration, unexpected color, witty microcopy). Glassmorphism for overlays.
 5. **No dark patterns. Anywhere.** Subscriptions, notifications, onboarding — all designed for trust.
+6. **Content-first.** UI should "get out of the way" during content consumption. Full-bleed media, vertical scrolling, immersive viewing. No content spam on the home screen — no articles unless requested.
+
+### Research-Backed Aesthetic Direction
+
+**Color:** Soft, muted palettes dominate Gen Z preferences — sage greens, dusty roses, lavender, warm cream. Subtle organic gradients (not bold 2010s style). Bold color as accent only. Dark mode prefers true dark + warm accents.
+
+**Typography:** Sans-serif dominant, growing appreciation for serif headlines. Rounded, friendly sans-serifs (e.g., Poppins, Nunito) align with health/wellness app expectations.
+
+**Imagery:** Authentic/unfiltered preferred over polished stock. Custom illustrations valued. Collage/scrapbook aesthetics trending.
+
+**Personalization priority (from UX research):** (1) Content/feed personalization, (2) Visual/aesthetic customization (themes, color schemes), (3) Functional personalization (reorder navigation, hide unused features), (4) Notification personalization (granular category-level control), (5) Identity personalization (name, pronouns). User-controlled personalization preferred over invisible behavioral tracking — "creepy" personalization causes backlash.
 
 ### Key States to Design
 
@@ -310,11 +367,24 @@ Libresse is building a privacy-first period tracking and commerce app for Gen Z 
 
 ### Design System
 
-- Bottom navigation bar (4 tabs: Home, My Cycle, Shop, Health Assistant)
-- Dark mode support (user-toggled, not forced)
+- Bottom navigation bar (4 tabs: Home, My Cycle, Shop, Health Assistant) — strongly preferred over hamburger menus by Gen Z
+- Dark mode support (user-toggled, not forced) — 70–80% of Gen Z prefer dark mode, but many women prefer lighter themes in health/wellness apps, so the *option* matters
 - Phase-adaptive color accents (subtle, user-can-disable)
 - Card-based "bento box" layout for home dashboard
-- Haptic feedback on key interactions (log confirmation, phase transition)
+- Haptic feedback + visual microinteractions on key interactions (log confirmation, phase transition) — feels "premium" per research
+- Swipe gestures for common actions (TikTok set this paradigm; intuitive and expected)
+
+### Cycle-as-Operating-System: Phase-Adaptive UX
+
+The entire experience adapts to the user's current cycle phase:
+
+**Menstrual Phase (Days 1–5):** Dashboard emphasizes comfort (pain management, heating pad reminders). Product spotlight: high-absorbency products. Health assistant proactively offers pain relief strategies. Energy indicator: "Rest mode." Gentle, warm UI tones.
+
+**Follicular Phase (Days 6–13):** Dashboard emphasizes energy and planning. Product needs shift to lighter protection. Health assistant surfaces exercise optimization. "Your energy is rising — great time for that big meeting." Brighter, more energetic UI.
+
+**Ovulation Window (Days 13–15):** Clear, non-judgmental fertility status (opt-in). No assumptions about intent. Health education about what's happening hormonally.
+
+**Luteal Phase (Days 16–28):** PMS prediction and preparation. Self-care content and symptom management. Product pre-ordering for upcoming period. "Your period is expected in 5 days — your essentials are ready." Warmer, softer UI tones.
 
 ---
 
@@ -418,7 +488,56 @@ Subscription {
 
 ---
 
-## 9. Dependencies & Integrations
+## 9. Business Model & Competitive Moats
+
+### Value Alignment
+
+The core strength of this concept is that **user value and business value are aligned**, not in tension:
+
+| User Value | Business Value |
+|------------|---------------|
+| Accurate cycle predictions | Predictable product demand forecasting |
+| Product recommendations by flow intensity | Higher conversion, lower return rates |
+| Subscription convenience | Recurring revenue, reduced churn |
+| Health education | Brand authority, trust, engagement |
+| AI health assistant | Differentiation, lock-in, product discovery |
+| Privacy-first architecture | Competitive moat against Flo/Clue |
+
+### Revenue Streams
+
+**Primary — Product Commerce:** Direct product sales through in-app shop, cycle-synced subscription boxes, personalized product bundles based on tracking data.
+
+**Secondary — Premium Features:** AI health assistant (deeper analysis), advanced analytics/reports, partner sharing features, wearable integrations.
+
+**Tertiary — Data Insights (Aggregated, Anonymized):** Product development insights from aggregated usage patterns, market research on menstrual product needs, clinical research partnerships (with explicit consent only).
+
+### Revenue Model (Illustrative)
+
+Average menstrual product spend: ~€100–120/year per person. The subscription e-commerce market is growing at 59.5% CAGR. Menstrual products are a near-perfect subscription category: predictable recurring need, product selection varies by cycle phase, forgetting to buy is a real pain point, and cycle data makes timing precise (not generic 30-day boxes).
+
+If 5% of app users convert to subscribers: with 1M users = 50,000 subscribers at ~€8/month average = €4.8M ARR. With 5M users = €24M ARR potential from subscriptions alone.
+
+### Adjacent Revenue Opportunities
+
+Cycle-synced product bundles ("Your Follicular Phase Kit"), seasonal/occasion packs ("Festival kit," "Travel pack," "First period starter kit" for teens/parents), wellness product expansion (heating pads, pain relief, cycle-phase-aware skincare, supplements — each justified by cycle data), partner API for wearable brands (positions Libresse as the cycle data platform), and anonymized B2B health insights for medical research (explicit opt-in only).
+
+### Competitive Moats
+
+| Moat | Description |
+|------|-------------|
+| Brand trust | A real product company with physical products users already trust |
+| Data-commerce loop | Tracking data makes commerce better → commerce data makes tracking better |
+| Privacy architecture | On-device processing is genuinely hard to replicate and easy to market |
+| Product expertise | No tech company can credibly recommend menstrual products |
+| Existing distribution | Retail presence means the app extends a relationship, not starts one |
+
+### Commerce UX Principle: Anticipate, Don't Advertise
+
+The commerce experience should feel like a **service, not a store.** Auto-detect when the user might need products based on cycle prediction. "Your period starts in ~3 days. Your usual order would arrive by then. Confirm?" — one tap. Track actual product usage to refine recommendations. Show cost comparisons: "You're currently spending ~€X/month. A subscription would save you €Y."
+
+---
+
+## 10. Dependencies & Integrations
 
 | Dependency | Team/Service | Status | Risk |
 |------------|-------------|--------|------|
@@ -434,7 +553,7 @@ Subscription {
 
 ---
 
-## 10. Out of Scope
+## 11. Out of Scope
 
 - **Fertility/conception mode** — V1 does not include trying-to-conceive features. This avoids heteronormative assumptions and reduces regulatory complexity.
 - **Community/social features** — No forums, comments, or user-generated content in V1. Explore post-launch based on demand.
@@ -448,7 +567,7 @@ Subscription {
 
 ---
 
-## 11. Open Questions
+## 12. Open Questions
 
 | # | Question | Owner | Due Date | Resolution |
 |---|----------|-------|----------|------------|
@@ -465,7 +584,7 @@ Subscription {
 
 ---
 
-## 12. Rollout Plan
+## 13. Rollout Plan
 
 ### Phase 0: Prototype (Current)
 - Build working prototype covering 4 core screens (Home, My Cycle, Shop, Health Assistant)
@@ -505,11 +624,11 @@ Subscription {
 
 ---
 
-## 13. Risks & Mitigations
+## 14. Risks & Mitigations
 
 | Risk | Likelihood | Impact | Mitigation |
 |------|-----------|--------|------------|
-| On-device AI quality insufficient for health queries | Medium | High | Hybrid architecture as fallback; pre-built response library; clearly scope assistant to menstrual health only |
+| On-device AI quality insufficient for health queries | Medium | High | Hybrid architecture as fallback; pre-built response library; clearly scope assistant to menstrual health only. Context: Woebot (leading AI therapy app) shut down June 2025; FDA is actively regulating AI health devices; Illinois banned AI from making independent therapeutic decisions. An assistant that is narrow and expert (menstrual health only) is more trustworthy than general-purpose AI. |
 | EU MDR classification triggers medical device regulation | Medium | High | Early legal review; position assistant as "educational wellness" not "diagnostic"; never use diagnostic language |
 | Essity product catalog/fulfillment integration delays | High | High | Build Shop with mock data for prototype; decouple tracking from commerce so app has standalone value |
 | Low commerce conversion — users want tracking but not shopping | Medium | Medium | Ensure standalone tracking value is excellent; commerce is additive, not required; validate willingness in prototype |
@@ -522,35 +641,101 @@ Subscription {
 
 ---
 
-## 14. Hypotheses Validation Framework
+## 15. Hypotheses Validation Framework
 
-The prototype must test these hypotheses (from the project brief):
+The prototype must test these hypotheses (from the project brief). UX research confidence assessments are included.
 
-| Hypothesis | What to Build | How to Validate | Success Signal |
-|------------|--------------|-----------------|----------------|
-| **H1** — App designed around cycle rhythm | Phase-aware home screen, adaptive UI, phase-specific content | 5-second comprehension test; post-task comparison to calendar-based tracker | ≥80% immediately understand their phase; ≥70% prefer phase-based over calendar-based |
-| **H2** — Understanding the body, not just tracking | AI health assistant with cycle-context answers | Moderated task: ask 3 health questions, rate usefulness | ≥70% rate responses as useful; ≥60% say "I learned something I didn't know" |
-| **H3** — Cost tracking and product management | Spend dashboard, subscription value comparison | Show spend data; measure reaction (useful vs. anxiety); subscription intent | ≥65% find it useful; ≥30% express subscription interest |
-| **H4** — Privacy as visible product feature | On-screen privacy indicator, privacy detail screen, no-account usage | Recall test: can users articulate data protections after 1 min? | ≥75% can articulate; privacy cited as top-3 reason to use in exit survey |
-| **H5** — Automated product replenishment | Pre-period order prompt, auto-replenishment preview | Task: review and confirm a pre-built order; rate helpful vs. presumptuous | ≥60% find it helpful; ≥40% would enable auto-replenishment |
+| Hypothesis | What to Build | How to Validate | Success Signal | Research Confidence |
+|------------|--------------|-----------------|----------------|---------------------|
+| **H1** — App designed around cycle rhythm | Phase-aware home screen, adaptive UI, phase-specific content | 5-second comprehension test; post-task comparison to calendar-based tracker | ≥80% immediately understand their phase; ≥70% prefer phase-based over calendar-based | **STRONG YES** — Users explicitly want phase-aware experiences; no major competitor does this well; Gen Z expects personalization as baseline |
+| **H2** — Understanding the body, not just tracking | AI health assistant with cycle-context answers | Moderated task: ask 3 health questions, rate usefulness | ≥70% rate responses as useful; ≥60% say "I learned something I didn't know" | **STRONG YES** — The #1 unmet need is "why do I feel like this?"; 84% of women feel unheard in healthcare; current apps collect data but deliver minimal intelligence |
+| **H3** — Cost tracking and product management | Spend dashboard, subscription value comparison | Show spend data; measure reaction (useful vs. anxiety); subscription intent | ≥65% find it useful; ≥30% express subscription interest | **YES** — Product cost tracking is a feature NO major competitor offers; ~€100–120/year expense feels invisible but adds up; frequently discussed on Reddit |
+| **H4** — Privacy as visible product feature | On-screen privacy indicator, privacy detail screen, no-account usage | Recall test: can users articulate data protections after 1 min? | ≥75% can articulate; privacy cited as top-3 reason to use in exit survey | **STRONG YES** — 35% of Gen Z stopped using a service due to privacy concerns (highest of any generation); 70–75% opt out of cross-app tracking; post-Dobbs fears are well-documented |
+| **H5** — Automated product replenishment | Pre-period order prompt, auto-replenishment preview | Task: review and confirm a pre-built order; rate helpful vs. presumptuous | ≥60% find it helpful; ≥40% would enable auto-replenishment | **YES** — "Running out mid-cycle" is a universally recognized pain point; Gen Z prefers convenience and automation; the key is user control (automation as an offer, not a default) |
 
 ---
 
-## 15. Appendix
+## 16. Appendix
 
 ### Reference Materials
 
 - **Project Brief:** `design/Libresse App Project Brief.docx` — Workshop brief by umain, March 2026
 - **UX Research:** `design/UX-Research-Libresse-App.md` — Deep research on target audience, competitive landscape, pain points, and ideation
-- **Competitive Intelligence:** Flo (380M+ downloads, $56M FTC fine), Clue (50M+, paywall backlash), Natural Cycles (FDA-cleared, $99.99/yr), Apple Health (best privacy, limited features)
-- **Market Data:** Femtech market $63.14B (2025), menstrual health apps $2.49B (2026) → $13.11B (2035) at 20.28% CAGR
+- **Competitive Intelligence:** Flo (380M+ downloads, FTC action + $56M class action), Clue (50M+, paywall backlash), Natural Cycles (FDA-cleared, $99.99/yr), Apple Health (best privacy, limited features), Ovia (15M+, employer-subsidized), Stardust (5M+, privacy claims debunked)
+- **Market Data:** Femtech market $34B–63B (2025, varies by scope), menstrual health apps $2.49B (2026) → $13.11B (2035) at 20.28% CAGR
 
-### Key Research Findings (Summary)
+### Competitive Landscape (Detailed)
 
+| App | Downloads | Pricing | Strengths | Critical Weakness |
+|-----|-----------|---------|-----------|-------------------|
+| **Flo** | 380M+ | Freemium ($49.99/yr) | Feature-rich, large community, brand recognition | Privacy trust destroyed (FTC action + $56M class action), aggressive paywalls |
+| **Clue** | 50M+ | Freemium ($29.99–39.99/yr) | Science-first, cleaner design, GDPR-compliant | Paywall frustration, overly clinical feel, financial struggles |
+| **Natural Cycles** | 10M+ | $99.99/yr | FDA-cleared contraceptive, temperature-based | Expensive, high-discipline requirement, ~7% failure rate |
+| **Apple Health** | Built-in | Free | Best privacy architecture, clean, no ads | Extremely limited features, basic predictions, iOS only |
+| **Ovia** | 15M+ | Free (employer-subsidized) | No user cost | Employers may access reproductive health data |
+| **Stardust** | 5M+ | Freemium | Post-Dobbs privacy marketing | Privacy claims debunked by security researchers |
+
+### Key Research Findings (Comprehensive)
+
+**Privacy & Trust:**
 - 25–30% of women considered deleting period apps post-Dobbs
-- 84% of women feel "unheard" in healthcare
-- 50% of Gen Z feel they have too many subscriptions
-- 40–50% of Gen Z disable push notifications for most apps
-- 71% of Gen Z expect personalization as baseline
+- 60–65% of Gen Z concerned about how companies use data (Morning Consult 2024)
+- 52% of Gen Z anxious about online privacy (Experian 2025)
+- 35% of Gen Z have stopped using a service due to privacy concerns — highest of any generation
+- 70–75% opt out of cross-app tracking (ATT)
 - 88% willing to share data if experience improves — but only 34% accept data sharing for marketing
+- 61% accept data sharing for healthcare purposes
+- 30–40% of Gen Z use VPNs
+
+**Engagement & Behavior:**
+- Gen Z daily screen time: ~4.5 hours on smartphone, 80–100+ phone unlocks per day
+- Usage pattern: short "snacking" sessions, not long blocks
+- Peak hours: midday (11am–1pm) and heavy evening (8pm–midnight)
+- 40–50% of Gen Z have turned off notifications for most apps
+- 50–60% have uninstalled an app because of annoying notifications
+- 50–60% of Gen Z use at least one home screen widget; 25–35% use three or more
+
+**Subscription & Commerce:**
+- ~50% of Gen Z feel they're paying for too many subscriptions (Deloitte 2024)
+- Average Gen Z user has 3–5 paid subscriptions
+- 60–65% prefer free, ad-supported apps over paid
+- Free trials that auto-convert are deeply mistrusted
+- Subscription e-commerce market growing at 59.5% CAGR
+- Average menstrual product spend: ~€100–120/year per person
+
+**Design & Personalization:**
+- 84% of women feel "unheard" in healthcare settings
+- 71% of Gen Z expect personalization as baseline (McKinsey)
+- 70–80% of Gen Z prefer dark mode
+- Bottom navigation bars strongly preferred over hamburger menus
+- Speed is the #1 UX factor — perceived lag is a dealbreaker
 - The #1 unmet need is "why do I feel like this?" not "when is my next period?"
+
+**Market:**
+- Global femtech market (2025): $34B–63B depending on scope definition
+- Menstrual health apps market (2026): $2.49B → projected $13.11B by 2035 (20.28% CAGR)
+- Only 4% of healthcare R&D addresses women's health directly
+- 61% of American adults used AI in H1 2025; OpenAI launched ChatGPT Health in January 2026
+
+### UX Research Sources
+
+**Live Web Research (March 2026):**
+- Bearable: Best Period Tracker Apps 2025
+- CycleSynced: 11 Apps Compared
+- FTC: Flo Health Settlement (2021)
+- MobiHealthNews: Flo FTC Settlement
+- Freshcode: Femtech Market Overview
+- BodySpec: Femtech Market Size & Trends 2025–2026
+- Yahoo Finance: FemTech Market Projected $266.99B by 2035
+- GlobeNewsWire: Menstrual Health Apps 20.28% CAGR
+- Experian: Gen Z Privacy Anxiety
+- TechPolicy Press: Gen Z Privacy Preferences
+- Usercentrics: Gen Z Wants Transparency
+- UW News: Period Apps Failing Users
+- Fortune: OpenAI ChatGPT Health Launch
+
+**Training Knowledge Sources:**
+- Pew Research Center, eMarketer/Insider Intelligence, data.ai, Morning Consult, Deloitte, McKinsey, YPulse
+- Wall Street Journal, Washington Post, The Verge, TechCrunch: Femtech coverage
+- EFF, Mozilla Foundation: Period tracker privacy analyses
+- Reddit: r/periods, r/TwoXChromosomes, r/birthcontrol, r/PCOS, r/endometriosis, r/privacy
