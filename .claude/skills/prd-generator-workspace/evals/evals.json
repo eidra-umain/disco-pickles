@@ -1,0 +1,20 @@
+{
+  "skill_name": "prd-generator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Generate a PRD for the Libresse app. The project summary is in pm/summary.md.",
+      "expected_output": "A comprehensive PRD in pm/prd.md with 14 sections, prioritised requirements, user stories, and success metrics based on the Libresse project summary."
+    },
+    {
+      "id": 2,
+      "prompt": "I have a project brief open in a Google Doc in Chrome. Can you read it and create a PRD from it?",
+      "expected_output": "The skill should attempt to read from Chrome tabs, extract content from the Google Doc, and generate a PRD. Should also create pm/summary.md if it doesn't exist."
+    },
+    {
+      "id": 3,
+      "prompt": "We brainstormed a fitness tracking app for seniors. It should track walks, remind them to take medication, and let family members check in. Create the PRD.",
+      "expected_output": "A PRD generated from conversation context since no summary file or Google Doc is provided. Should ask clarifying questions if needed, then produce a full PRD."
+    }
+  ]
+}
