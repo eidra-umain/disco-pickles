@@ -1,0 +1,4235 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "rKtQl",
+      "x": 0,
+      "y": 0,
+      "name": "Competitive UI Analysis — Libresse",
+      "width": 2400,
+      "fill": "#111111",
+      "layout": "vertical",
+      "gap": 32,
+      "padding": 40,
+      "children": [
+        {
+          "type": "frame",
+          "id": "3EzGC",
+          "name": "hdr",
+          "width": "fill_container",
+          "gap": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "2gSAJ",
+              "name": "hdrLeft",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "PE9JS",
+                  "name": "t1",
+                  "fill": "#FFFFFF",
+                  "content": "Competitive UI Analysis",
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "ktIhC",
+                  "name": "t2",
+                  "fill": "#888888",
+                  "content": "Period Tracking · 5 Apps · Pattern Comparison · Design Implications for Libresse",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "4NIIZ",
+              "name": "hdrTag",
+              "fill": "#E31D94",
+              "cornerRadius": 20,
+              "padding": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "POmII",
+                  "name": "tagTxt",
+                  "fill": "#FFFFFF",
+                  "content": "LIBRESSE APP",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "700",
+                  "letterSpacing": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "L0zwG",
+          "name": "div1",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "#333333"
+        },
+        {
+          "type": "text",
+          "id": "zdCto",
+          "name": "secLbl",
+          "fill": "#E31D94",
+          "content": "01 — COLOR LANDSCAPE",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": "700",
+          "letterSpacing": 3
+        },
+        {
+          "type": "text",
+          "id": "eCtFs",
+          "name": "secSub",
+          "fill": "#AAAAAA",
+          "content": "Where does Libresse sit visually? Every competitor avoids hot pink. The cerise #E31D94 is unoccupied territory.",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "aX3Zh",
+          "name": "colorRow",
+          "width": "fill_container",
+          "gap": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "kUndL",
+              "name": "c1",
+              "width": "fill_container",
+              "fill": "#1A1A1A",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "URjau",
+                  "name": "c1name",
+                  "fill": "#FFFFFF",
+                  "content": "Clue",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "JyVRn",
+                  "name": "c1tag",
+                  "fill": "#888888",
+                  "content": "Gender-neutral · No pink",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "ajM5W",
+                  "name": "c1colors",
+                  "width": "fill_container",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "cghfk",
+                      "name": "c1a",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#E74C3C",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "XL3ZX",
+                      "name": "c1b",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#1ABC9C",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "3XErN",
+                      "name": "c1c",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#3498DB",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "6D3qE",
+                      "name": "c1d",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#9B59B6",
+                      "cornerRadius": 6
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "wJNWq",
+                  "name": "c1note",
+                  "fill": "#666666",
+                  "content": "Phase-coded: red (period), teal (fertile), blue (ovulation), purple (PMS). Deliberate absence of \"feminine\" colors.",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "1T6lf",
+              "name": "c2",
+              "width": "fill_container",
+              "fill": "#1A1A1A",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "wOdB8",
+                  "name": "c2name",
+                  "fill": "#FFFFFF",
+                  "content": "Flo",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "RH2MD",
+                  "name": "c2tag",
+                  "fill": "#CE93D8",
+                  "content": "Purple, not pink!",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "aicge",
+                  "name": "c2colors",
+                  "width": "fill_container",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "JZC3P",
+                      "name": "c2a",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#7B1FA2",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "JeGU9",
+                      "name": "c2b",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#CE93D8",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Jg0Qb",
+                      "name": "c2c",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#E1BEE7",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ewxSI",
+                      "name": "c2d",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#F3E5F5",
+                      "cornerRadius": 6
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "oFwg2",
+                  "name": "c2note",
+                  "fill": "#666666",
+                  "content": "Deep violet → soft lavender gradient. Common misconception it's pink. Purple = medical authority + femininity without being stereotypical.",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "WElvM",
+              "name": "c3",
+              "width": "fill_container",
+              "fill": "#1A1A1A",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "JP22j",
+                  "name": "c3name",
+                  "fill": "#FFFFFF",
+                  "content": "Natural Cycles",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "hOV0C",
+                  "name": "c3tag",
+                  "fill": "#888888",
+                  "content": "Clinical · Dark-first",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "hihov",
+                  "name": "c3colors",
+                  "width": "fill_container",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "gpVIa",
+                      "name": "c3a",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#4CAF50",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "6GYTT",
+                      "name": "c3b",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#D32F2F",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "FEFu4",
+                      "name": "c3c",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#212121",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "44eJ3",
+                      "name": "c3d",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#424242",
+                      "cornerRadius": 6
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "TQ2Uf",
+                  "name": "c3note",
+                  "fill": "#666666",
+                  "content": "Binary signal: green = safe, red = fertile. Dark bg reduces eye strain for morning temp logging. Medical device = serious palette.",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "2v3Oe",
+              "name": "c4",
+              "width": "fill_container",
+              "fill": "#1A1A1A",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "P1nMs",
+                  "name": "c4name",
+                  "fill": "#FFFFFF",
+                  "content": "Headspace",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "qXzg2",
+                  "name": "c4tag",
+                  "fill": "#888888",
+                  "content": "Warm · Illustrated",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "UOx52",
+                  "name": "c4colors",
+                  "width": "fill_container",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "BdRLL",
+                      "name": "c4a",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#FF8C42",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Gjlzf",
+                      "name": "c4b",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#FFD166",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ypSef",
+                      "name": "c4c",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#3D2C8D",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Ksngg",
+                      "name": "c4d",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#1B1464",
+                      "cornerRadius": 6
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "vq8Dv",
+                  "name": "c4note",
+                  "fill": "#666666",
+                  "content": "Orange/yellow for day mode, deep purple/navy for sleep. Context-adaptive color = mood-appropriate. Illustration-heavy.",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Rv33k",
+              "name": "c5",
+              "width": "fill_container",
+              "fill": "#1A1A1A",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ilne4",
+                  "name": "c5name",
+                  "fill": "#FFFFFF",
+                  "content": "Oura",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "YTgUI",
+                  "name": "c5tag",
+                  "fill": "#888888",
+                  "content": "Dark premium · Scores",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "izluS",
+                  "name": "c5colors",
+                  "width": "fill_container",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "hAbox",
+                      "name": "c5a",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#1E88E5",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "T9mDk",
+                      "name": "c5b",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#FDD835",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "T3BDQ",
+                      "name": "c5c",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#1A1A1A",
+                      "cornerRadius": 6,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#444444"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "iY33C",
+                      "name": "c5d",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#0D0D0D",
+                      "cornerRadius": 6
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "ml0Mz",
+                  "name": "c5note",
+                  "fill": "#666666",
+                  "content": "Near-black canvas. Blue = good, yellow = ok, red = attention. Data disappears into elegance. Now includes cycle day tracking.",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "V4gwx",
+              "name": "c6",
+              "width": "fill_container",
+              "fill": "#1A1A1A",
+              "cornerRadius": 12,
+              "stroke": {
+                "align": "inside",
+                "thickness": 2,
+                "fill": "#E31D94"
+              },
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "L6CdJ",
+                  "name": "c6name",
+                  "fill": "#E31D94",
+                  "content": "Libresse ←",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "LuNL0",
+                  "name": "c6tag",
+                  "fill": "#E31D94",
+                  "content": "UNOCCUPIED · Bold · Phase-adaptive",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "KQ4xf",
+                  "name": "c6colors",
+                  "width": "fill_container",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Nuiu9",
+                      "name": "c6a",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#E31D94",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "NFcAu",
+                      "name": "c6b",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#C75B3A",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "LIhsf",
+                      "name": "c6c",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#4A9B6E",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "u6I5H",
+                      "name": "c6d",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#C4A24E",
+                      "cornerRadius": 6
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "5Gfr4",
+                  "name": "c6e",
+                  "width": "fill_container",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "7OtJj",
+                      "name": "c6f",
+                      "width": "fill_container",
+                      "height": 20,
+                      "fill": "#9B7FC4",
+                      "cornerRadius": 4
+                    },
+                    {
+                      "type": "text",
+                      "id": "mfSEB",
+                      "name": "c6g",
+                      "fill": "#888888",
+                      "content": "← 4 phase colors",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "evQrS",
+                  "name": "c6note",
+                  "fill": "#AAAAAA",
+                  "content": "Cerise pink + 4 phase colors (terracotta/green/golden/lavender). No competitor uses phase-adaptive UI. Strongest differentiator.",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "DZRET",
+          "name": "div2",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "#333333"
+        },
+        {
+          "type": "text",
+          "id": "pOEqQ",
+          "name": "s2lbl",
+          "fill": "#E31D94",
+          "content": "02 — DASHBOARD ARCHETYPES",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": "700",
+          "letterSpacing": 3
+        },
+        {
+          "type": "text",
+          "id": "Bh7uL",
+          "name": "s2sub",
+          "fill": "#AAAAAA",
+          "content": "Three ways to answer \"where am I in my cycle?\" — each makes a different tradeoff between glanceability, data density, and emotional tone.",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "xr1UL",
+          "name": "dashRow",
+          "width": "fill_container",
+          "gap": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "8eFqB",
+              "name": "a1",
+              "width": "fill_container",
+              "fill": "#1A1A1A",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "fioLQ",
+                  "name": "a1badge",
+                  "fill": "#E74C3C",
+                  "cornerRadius": 12,
+                  "padding": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SHNoc",
+                      "name": "a1bTxt",
+                      "fill": "#FFFFFF",
+                      "content": "THE WHEEL",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "7bRS7",
+                  "name": "a1title",
+                  "fill": "#FFFFFF",
+                  "content": "Clue — Circular Cycle View",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "toSVK",
+                  "name": "a1img",
+                  "width": "fill_container",
+                  "height": 420,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1772802449066.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 8
+                },
+                {
+                  "type": "frame",
+                  "id": "KijUA",
+                  "name": "a1ann",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "CweGX",
+                      "name": "a1p1",
+                      "fill": "#1ABC9C",
+                      "content": "→ Cycle as circle = matches mental model",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "h2Kir",
+                      "name": "a1p2",
+                      "fill": "#1ABC9C",
+                      "content": "→ \"Day 28\" + \"2 days until period\" = dual signal",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zVMfZ",
+                      "name": "a1p3",
+                      "fill": "#1ABC9C",
+                      "content": "→ Tracking dots on ring show completeness",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "wmm2Q",
+                      "name": "a1p4",
+                      "fill": "#FDD835",
+                      "content": "⚡ Medium info density — requires cycle literacy to read",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "YDnCK",
+                  "name": "a1impl",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E",
+                  "cornerRadius": 8,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jlSlp",
+                      "name": "a1implTxt",
+                      "fill": "#E31D94",
+                      "content": "LIBRESSE: Cycle Ring planned in design spec. Make phases more visually distinct than Clue — use the 4-color system, not just tints.",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "8w2DW",
+              "name": "a2",
+              "width": "fill_container",
+              "fill": "#1A1A1A",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ZdIvA",
+                  "name": "a2badge",
+                  "fill": "#7B1FA2",
+                  "cornerRadius": 12,
+                  "padding": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "GbwZk",
+                      "name": "a2bTxt",
+                      "fill": "#FFFFFF",
+                      "content": "THE COUNTDOWN",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "7KdUc",
+                  "name": "a2title",
+                  "fill": "#FFFFFF",
+                  "content": "Flo — \"Period in X days\"",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "DOgOB",
+                  "name": "a2img",
+                  "width": "fill_container",
+                  "height": 420,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1772802456572.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 8
+                },
+                {
+                  "type": "frame",
+                  "id": "SxIM2",
+                  "name": "a2ann",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "4Y4IL",
+                      "name": "a2p1",
+                      "fill": "#CE93D8",
+                      "content": "→ Giant countdown number = instant understanding",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "NHC52",
+                      "name": "a2p2",
+                      "fill": "#CE93D8",
+                      "content": "→ Calendar below for context — but hero is the number",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hyIg6",
+                      "name": "a2p3",
+                      "fill": "#CE93D8",
+                      "content": "→ Lowest cognitive load of the three approaches",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "1Gd8q",
+                      "name": "a2p4",
+                      "fill": "#FDD835",
+                      "content": "⚡ Least visual — relies on text, not shape/color",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "SPQSq",
+                  "name": "a2impl",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E",
+                  "cornerRadius": 8,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pseKs",
+                      "name": "a2implTxt",
+                      "fill": "#E31D94",
+                      "content": "LIBRESSE: The Phase Banner + Today's Nudge can beat this — same glanceability but with visual warmth and actionable context (\"your flow starts in 3 days — stocked up?\").",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "vA12g",
+              "name": "a3",
+              "width": "fill_container",
+              "fill": "#1A1A1A",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "mYaXA",
+                  "name": "a3badge",
+                  "fill": "#1E88E5",
+                  "cornerRadius": 12,
+                  "padding": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "kR49E",
+                      "name": "a3bTxt",
+                      "fill": "#FFFFFF",
+                      "content": "THE SCORE",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "rHuI7",
+                  "name": "a3title",
+                  "fill": "#FFFFFF",
+                  "content": "Oura — One Big Number",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "08BGi",
+                  "name": "a3img",
+                  "width": "fill_container",
+                  "height": 420,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1772802463602.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 8
+                },
+                {
+                  "type": "frame",
+                  "id": "p260T",
+                  "name": "a3ann",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "BdjxC",
+                      "name": "a3p1",
+                      "fill": "#90CAF9",
+                      "content": "→ Readiness 88 / Sleep 84 / Activity 91 / Cycle Day 6",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "cdoRQ",
+                      "name": "a3p2",
+                      "fill": "#90CAF9",
+                      "content": "→ Zero daily input — all passive from wearable",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "7qPup",
+                      "name": "a3p3",
+                      "fill": "#90CAF9",
+                      "content": "→ Deep drill-down exists but never forced",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "BlARk",
+                      "name": "a3p4",
+                      "fill": "#FDD835",
+                      "content": "⚡ Requires hardware — not standalone. Premium feeling excludes mass market.",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "SutMC",
+                  "name": "a3impl",
+                  "width": "fill_container",
+                  "fill": "#1E1E1E",
+                  "cornerRadius": 8,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "tr28L",
+                      "name": "a3implTxt",
+                      "fill": "#E31D94",
+                      "content": "LIBRESSE: Adopt the \"show one thing\" principle for Home. Gen Z doesn't want to parse data — surface the single most relevant insight. Details on demand.",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "1OmHX",
+          "name": "div3",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "#333333"
+        },
+        {
+          "type": "text",
+          "id": "xVmJv",
+          "name": "s3lbl",
+          "fill": "#E31D94",
+          "content": "03 — DATA INPUT SPECTRUM",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": "700",
+          "letterSpacing": 3
+        },
+        {
+          "type": "text",
+          "id": "dPlAU",
+          "name": "s3sub",
+          "fill": "#AAAAAA",
+          "content": "How much work does the user do? Ranges from zero-input passive tracking (Oura) to 100+ trackable items (Clue). Gen Z skews toward minimal.",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "wVSsj",
+          "name": "specBar",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "children": [
+            {
+              "type": "frame",
+              "id": "16tiv",
+              "name": "barLabels",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "VC6vz",
+                  "name": "barL",
+                  "fill": "#4CAF50",
+                  "content": "ZERO INPUT",
+                  "fontFamily": "Inter",
+                  "fontSize": 10,
+                  "fontWeight": "700",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "giMEB",
+                  "name": "barR",
+                  "fill": "#E74C3C",
+                  "content": "HEAVY JOURNALING",
+                  "fontFamily": "Inter",
+                  "fontSize": 10,
+                  "fontWeight": "700",
+                  "letterSpacing": 2
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "J1276",
+              "name": "barTrack",
+              "width": "fill_container",
+              "height": 8,
+              "cornerRadius": 4,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "4KKu6",
+                  "name": "barGrad",
+                  "width": "fill_container",
+                  "height": 8,
+                  "fill": "#333333",
+                  "cornerRadius": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "21NYj",
+          "name": "inputRow",
+          "width": "fill_container",
+          "gap": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "uMS3c",
+              "name": "i1",
+              "width": "fill_container",
+              "fill": "#1A1A1A",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "bPyrL",
+                  "name": "i1head",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "pRDqz",
+                      "name": "i1dot",
+                      "width": 10,
+                      "height": 10,
+                      "fill": "#4CAF50",
+                      "cornerRadius": 5
+                    },
+                    {
+                      "type": "text",
+                      "id": "AFJy1",
+                      "name": "i1name",
+                      "fill": "#FFFFFF",
+                      "content": "Oura — 0 taps",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "GwAA7",
+                  "name": "i1desc",
+                  "fill": "#888888",
+                  "content": "Passive wearable. No manual logging required. Data collected automatically while you sleep/move.",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Oqq05",
+                  "name": "i1take",
+                  "fill": "#4CAF50",
+                  "content": "Gen Z ideal: invisible effort, visible insight.",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "cZIJv",
+              "name": "i2",
+              "width": "fill_container",
+              "fill": "#1A1A1A",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "dXnDG",
+                  "name": "i2head",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vUyL5",
+                      "name": "i2dot",
+                      "width": 10,
+                      "height": 10,
+                      "fill": "#4CAF50",
+                      "cornerRadius": 5
+                    },
+                    {
+                      "type": "text",
+                      "id": "N2HCe",
+                      "name": "i2name",
+                      "fill": "#FFFFFF",
+                      "content": "Natural Cycles — 1-2 taps",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "Wirnj",
+                  "name": "i2desc",
+                  "fill": "#888888",
+                  "content": "Single temp reading (~30 sec). Optional symptom chips with emoji. Morning-optimized dark UI. Speed is the UX.",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "j8hsU",
+                  "name": "i2take",
+                  "fill": "#4CAF50",
+                  "content": "Proof that minimal input = high engagement if core data is valuable.",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "FXzQg",
+              "name": "i3",
+              "width": "fill_container",
+              "fill": "#1A1A1A",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "O5yNG",
+                  "name": "i3head",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "cULSq",
+                      "name": "i3dot",
+                      "width": 10,
+                      "height": 10,
+                      "fill": "#FDD835",
+                      "cornerRadius": 5
+                    },
+                    {
+                      "type": "text",
+                      "id": "vlZ7i",
+                      "name": "i3name",
+                      "fill": "#FFFFFF",
+                      "content": "Flo — 3-4 taps",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "6w809",
+                  "name": "i3desc",
+                  "fill": "#888888",
+                  "content": "Illustrated chip-based logging. 70+ symptoms across 16 categories. Icon + label makes browsing fun. Symptom Checker adds purpose to logging.",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "e9R0A",
+                  "name": "i3take",
+                  "fill": "#FDD835",
+                  "content": "Logging feels purposeful when it leads to insights (\"your symptoms match PCOS pattern\").",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "oppGP",
+              "name": "i4",
+              "width": "fill_container",
+              "fill": "#1A1A1A",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "yZDbb",
+                  "name": "i4head",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ZC3mH",
+                      "name": "i4dot",
+                      "width": 10,
+                      "height": 10,
+                      "fill": "#E74C3C",
+                      "cornerRadius": 5
+                    },
+                    {
+                      "type": "text",
+                      "id": "OrXqm",
+                      "name": "i4name",
+                      "fill": "#FFFFFF",
+                      "content": "Clue — 3-5 taps (100+ options)",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "50pel",
+                  "name": "i4desc",
+                  "fill": "#888888",
+                  "content": "Modal with category buttons, icon grid. Light/Medium/Heavy/Super heavy for flow. 100+ trackable experiences. Power-user territory.",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "7ejUg",
+                  "name": "i4take",
+                  "fill": "#E74C3C",
+                  "content": "Comprehensive ≠ engaging. More options can mean more friction and drop-off for casual users.",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "e1uiV",
+              "name": "i5",
+              "width": "fill_container",
+              "fill": "#1A1A1A",
+              "cornerRadius": 12,
+              "stroke": {
+                "align": "inside",
+                "thickness": 2,
+                "fill": "#E31D94"
+              },
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "KFqxJ",
+                  "name": "i5head",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ktFAD",
+                      "name": "i5dot",
+                      "width": 10,
+                      "height": 10,
+                      "fill": "#E31D94",
+                      "cornerRadius": 5
+                    },
+                    {
+                      "type": "text",
+                      "id": "yjHpW",
+                      "name": "i5name",
+                      "fill": "#E31D94",
+                      "content": "Libresse — target: 1-2 taps",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "4Kg4l",
+                  "name": "i5desc",
+                  "fill": "#CCCCCC",
+                  "content": "Flow log only (tap intensity). Everything else optional. AI learns patterns passively. Education replaces journaling as the engagement hook.",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "cuZk5",
+                  "name": "i5take",
+                  "fill": "#E31D94",
+                  "content": "\"Log less, learn more\" — the anti-journaling period app. Open for content, not chores.",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "6fV6m",
+          "name": "div4",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "#333333"
+        },
+        {
+          "type": "text",
+          "id": "tRsjW",
+          "name": "s4lbl",
+          "fill": "#E31D94",
+          "content": "04 — FEATURES WORTH STEALING",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": "700",
+          "letterSpacing": 3
+        },
+        {
+          "type": "text",
+          "id": "Y6xcX",
+          "name": "s4sub",
+          "fill": "#AAAAAA",
+          "content": "Specific patterns from competitors that solve problems Libresse will face. Not \"nice to have\" — these are proven solutions to real UX challenges.",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "rY7jr",
+          "name": "featRow",
+          "width": "fill_container",
+          "gap": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "DMPeT",
+              "name": "f1",
+              "width": "fill_container",
+              "fill": "#1A1A1A",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 14,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "QgDFV",
+                  "name": "f1from",
+                  "fill": "#CE93D8",
+                  "content": "FROM FLO",
+                  "fontFamily": "Inter",
+                  "fontSize": 10,
+                  "fontWeight": "700",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "y7g11",
+                  "name": "f1title",
+                  "fill": "#FFFFFF",
+                  "content": "Symptom Checker",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "rO1Eg",
+                  "name": "f1img",
+                  "width": "fill_container",
+                  "height": 240,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1772802602650.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 8
+                },
+                {
+                  "type": "text",
+                  "id": "drzd1",
+                  "name": "f1desc",
+                  "fill": "#888888",
+                  "content": "Matches logged symptoms to conditions (PCOS, Endometriosis, Fibroids). Gives logging a PURPOSE — \"why should I track cramps?\" becomes \"your pattern looks like X, talk to your doctor.\"",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "oQlbW",
+                  "name": "f1lib",
+                  "fill": "#E31D94",
+                  "content": "→ LIBRESSE: Build this into AI Health Assistant. Conversational, not clinical. \"Hey, I noticed your cramps have been heavier lately — want to learn about what that might mean?\"",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Nrz55",
+              "name": "f2",
+              "width": "fill_container",
+              "fill": "#1A1A1A",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 14,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "mVEk5",
+                  "name": "f2from",
+                  "fill": "#FF8C42",
+                  "content": "FROM HEADSPACE",
+                  "fontFamily": "Inter",
+                  "fontSize": 10,
+                  "fontWeight": "700",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "UNnfF",
+                  "name": "f2title",
+                  "fill": "#FFFFFF",
+                  "content": "Context-Adaptive UI",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "PcMro",
+                  "name": "f2img",
+                  "width": "fill_container",
+                  "height": 240,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1772802610347.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 8
+                },
+                {
+                  "type": "text",
+                  "id": "wULUZ",
+                  "name": "f2desc",
+                  "fill": "#888888",
+                  "content": "Day mode = bright orange/yellow. Sleep content = deep purple/navy. The entire visual mood shifts based on WHAT you're doing, not just preferences. Category cards (Meditate, Sleep, Breathe, Focus) each have distinct color worlds.",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Y94HA",
+                  "name": "f2lib",
+                  "fill": "#E31D94",
+                  "content": "→ LIBRESSE: Phase-adaptive UI is this on steroids. Menstrual = terracotta warmth. Follicular = fresh green. Ovulation = golden energy. Luteal = calm lavender. The app FEELS different each week.",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "YjdVv",
+              "name": "f3",
+              "width": "fill_container",
+              "fill": "#1A1A1A",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 14,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "wYRtS",
+                  "name": "f3from",
+                  "fill": "#1ABC9C",
+                  "content": "FROM CLUE + FLO",
+                  "fontFamily": "Inter",
+                  "fontSize": 10,
+                  "fontWeight": "700",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "f1Wjx",
+                  "name": "f3title",
+                  "fill": "#FFFFFF",
+                  "content": "Privacy as Product",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "biqLG",
+                  "name": "f3img",
+                  "width": "fill_container",
+                  "height": 240,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1772802619480.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 8
+                },
+                {
+                  "type": "text",
+                  "id": "5IqVL",
+                  "name": "f3desc",
+                  "fill": "#888888",
+                  "content": "Clue: \"Strict data privacy\" badge on home screen. Flo: Anonymous Mode toggle that strips identity from account. Both make privacy VISIBLE — not buried in settings, but front and center as a feature.",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "PrVag",
+                  "name": "f3lib",
+                  "fill": "#E31D94",
+                  "content": "→ LIBRESSE: On-device processing beats both. \"Your data never leaves your phone\" > \"We anonymize you.\" PrivacyBadge component on every screen. Gen Z cares about this — make it a selling point, not fine print.",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "hnSQn",
+          "name": "div5",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "#333333"
+        },
+        {
+          "type": "text",
+          "id": "2ZlHx",
+          "name": "s5lbl",
+          "fill": "#E31D94",
+          "content": "05 — THE LIBRESSE POSITION",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": "700",
+          "letterSpacing": 3
+        },
+        {
+          "type": "text",
+          "id": "35FJ2",
+          "name": "s5sub",
+          "fill": "#AAAAAA",
+          "content": "Synthesizing the competitive landscape into a clear design position. What Libresse is — and what it deliberately isn't.",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "pezb5",
+          "name": "posRow",
+          "width": "fill_container",
+          "gap": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "BOH5x",
+              "name": "isCard",
+              "width": "fill_container",
+              "fill": "#E31D94",
+              "cornerRadius": 16,
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 28,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ybE86",
+                  "name": "isTitle",
+                  "fill": "#FFFFFF",
+                  "content": "LIBRESSE IS",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "700",
+                  "letterSpacing": 3
+                },
+                {
+                  "type": "text",
+                  "id": "8gRdM",
+                  "name": "is1",
+                  "fill": "#FFFFFF",
+                  "content": "✓  Bold cerise in a sea of purple, teal, and dark UI",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "QgFkd",
+                  "name": "is2",
+                  "fill": "#FFFFFF",
+                  "content": "✓  Phase-adaptive — the app changes with your cycle",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "9lDH5",
+                  "name": "is3",
+                  "fill": "#FFFFFF",
+                  "content": "✓  Education-first — learn about your body through AI",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "tsj5j",
+                  "name": "is4",
+                  "fill": "#FFFFFF",
+                  "content": "✓  Minimal logging — 1-2 taps, not a journal",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "gYr43",
+                  "name": "is5",
+                  "fill": "#FFFFFF",
+                  "content": "✓  Commerce as service — \"stocked up?\" not \"buy now\"",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "cf2c3",
+                  "name": "is6",
+                  "fill": "#FFFFFF",
+                  "content": "✓  Privacy you can see — on-device, not just anonymized",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "iGFWb",
+              "name": "isntCard",
+              "width": "fill_container",
+              "fill": "#1A1A1A",
+              "cornerRadius": 16,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#333333"
+              },
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 28,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "UXXLy",
+                  "name": "isntTitle",
+                  "fill": "#666666",
+                  "content": "LIBRESSE IS NOT",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "700",
+                  "letterSpacing": 3
+                },
+                {
+                  "type": "text",
+                  "id": "eEsle",
+                  "name": "isnt1",
+                  "fill": "#666666",
+                  "content": "✗  A daily journaling app (Clue's 100+ trackable items)",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "cn0aY",
+                  "name": "isnt2",
+                  "fill": "#666666",
+                  "content": "✗  Gender-neutral to the point of being bland (Clue)",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "sIY8K",
+                  "name": "isnt3",
+                  "fill": "#666666",
+                  "content": "✗  A medical device that demands daily data (Natural Cycles)",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "9VFhS",
+                  "name": "isnt4",
+                  "fill": "#666666",
+                  "content": "✗  Purple (Flo owns that. We own cerise.)",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "R7563",
+                  "name": "isnt5",
+                  "fill": "#666666",
+                  "content": "✗  Hardware-dependent (Oura needs a ring)",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Rie2N",
+                  "name": "isnt6",
+                  "fill": "#666666",
+                  "content": "✗  An app that guilt-trips you for not opening it daily",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "oTIcX",
+          "name": "div6",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "#333333"
+        },
+        {
+          "type": "frame",
+          "id": "smb8B",
+          "name": "tagline",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 32,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "cDuzf",
+              "name": "tl1",
+              "fill": "#E31D94",
+              "content": "\"Log less, learn more.\"",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "0SsjR",
+              "name": "tl2",
+              "fill": "#888888",
+              "content": "The anti-journaling period app. Bold. Private. Educational. Yours.",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "46D0R",
+      "x": 0,
+      "y": 2960,
+      "name": "JTBD — Jobs To Be Done",
+      "width": 2400,
+      "fill": "#111111",
+      "cornerRadius": 12,
+      "layout": "vertical",
+      "gap": 32,
+      "padding": 40,
+      "children": [
+        {
+          "type": "text",
+          "id": "gx7Wa",
+          "name": "title",
+          "fill": "#E31D94",
+          "content": "JOBS TO BE DONE — Libresse App MVP",
+          "fontFamily": "Inter",
+          "fontSize": 32,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "2GXPB",
+          "name": "subtitle",
+          "fill": "#888888",
+          "content": "14 MVP jobs · 4 Next-iteration jobs · Base for wireframes",
+          "fontFamily": "Inter",
+          "fontSize": 16,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "rectangle",
+          "id": "3WYm5",
+          "name": "divider",
+          "fill": "#333333",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "T4AEF",
+          "name": "Section: Home",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "4MiIS",
+              "name": "homeHeader",
+              "width": "fill_container",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "rrg6W",
+                  "name": "homeIcon",
+                  "width": 24,
+                  "height": 24,
+                  "iconFontName": "home",
+                  "iconFontFamily": "lucide",
+                  "fill": "#C75B3A"
+                },
+                {
+                  "type": "text",
+                  "id": "grbxz",
+                  "name": "homeTitle",
+                  "fill": "#FFFFFF",
+                  "content": "1 · HOME",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "bwDBw",
+                  "name": "homeQ",
+                  "fill": "#C75B3A",
+                  "content": "\"Where am I and what's coming?\"",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "fontStyle": "italic"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "JvjTZ",
+              "name": "homeRow",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "UJntB",
+                  "name": "H1",
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#333333"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "wgmx0",
+                      "name": "h1badge",
+                      "fill": "#E31D94",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "X12ns",
+                          "name": "h1badgeT",
+                          "fill": "#FFFFFF",
+                          "content": "MVP",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "nVYGE",
+                      "name": "h1id",
+                      "fill": "#FFFFFF",
+                      "content": "H1 — Glance at my cycle status",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "vVaTs",
+                      "name": "h1job",
+                      "fill": "#CCCCCC",
+                      "content": "When I open the app, I want to instantly see what cycle day and phase I'm in so I can orient myself without thinking.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "jzeXw",
+                      "name": "h1crit",
+                      "fill": "#4A9B6E",
+                      "content": "✓ Phase-adaptive color visible immediately\n✓ Single hero element — cycle ring or day number\n✓ Identify day + phase in under 2 seconds",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FQA7T",
+                  "name": "H2",
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#333333"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "X3bI7",
+                      "name": "h2badge",
+                      "fill": "#E31D94",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "zzfvt",
+                          "name": "h2badgeT",
+                          "fill": "#FFFFFF",
+                          "content": "MVP",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "52Mgd",
+                      "name": "h2id",
+                      "fill": "#FFFFFF",
+                      "content": "H2 — Know what to expect today",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "eKMZK",
+                      "name": "h2job",
+                      "fill": "#CCCCCC",
+                      "content": "When I'm on the home screen, I want to see one relevant insight about what's coming so I can feel prepared, not surprised.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Kqz5m",
+                      "name": "h2crit",
+                      "fill": "#4A9B6E",
+                      "content": "✓ One nudge card, not a feed\n✓ Phase-aware copy\n✓ Links to Health Assistant or Shop",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ooP4U",
+                  "name": "H3",
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#333333"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "QqaMa",
+                      "name": "h3badge",
+                      "fill": "#E31D94",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "kfrmy",
+                          "name": "h3badgeT",
+                          "fill": "#FFFFFF",
+                          "content": "MVP",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "07vsX",
+                      "name": "h3id",
+                      "fill": "#FFFFFF",
+                      "content": "H3 — Log period start (1–2 taps)",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yRCv9",
+                      "name": "h3job",
+                      "fill": "#CCCCCC",
+                      "content": "When my period starts, I want to tell the app in 1–2 taps so I can keep predictions accurate without journaling.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "BOMVS",
+                      "name": "h3crit",
+                      "fill": "#4A9B6E",
+                      "content": "✓ Persistent quick-log on Home\n✓ Select flow intensity → done\n✓ Logged in under 5 seconds",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PEmVa",
+                  "name": "H4",
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#333333"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Dtps2",
+                      "name": "h4badge",
+                      "fill": "#E31D94",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "XOaLX",
+                          "name": "h4badgeT",
+                          "fill": "#FFFFFF",
+                          "content": "MVP",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "JYAUo",
+                      "name": "h4id",
+                      "fill": "#FFFFFF",
+                      "content": "H4 — Data is private",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "4m77Y",
+                      "name": "h4job",
+                      "fill": "#CCCCCC",
+                      "content": "When I see the app, I want to see clear proof my data stays on my phone so I can trust it with sensitive health info.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "3SaCL",
+                      "name": "h4crit",
+                      "fill": "#4A9B6E",
+                      "content": "✓ PrivacyBadge visible on Home\n✓ \"On your device only\" — always present\n✓ Not buried in settings",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "tErjY",
+          "name": "Section: My Cycle",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "JPJhF",
+              "name": "cycleHeader",
+              "width": "fill_container",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "2ehRh",
+                  "name": "cycleIcon",
+                  "width": 24,
+                  "height": 24,
+                  "iconFontName": "circle",
+                  "iconFontFamily": "lucide",
+                  "fill": "#4A9B6E"
+                },
+                {
+                  "type": "text",
+                  "id": "Cj5gq",
+                  "name": "cycleTitle",
+                  "fill": "#FFFFFF",
+                  "content": "2 · MY CYCLE",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "cIDT5",
+                  "name": "cycleQ",
+                  "fill": "#4A9B6E",
+                  "content": "\"What does my body do?\"",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "fontStyle": "italic"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "cPE9B",
+              "name": "cycleRow",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "DH12R",
+                  "name": "C1",
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#333333"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "jYvWD",
+                      "name": "c1badge",
+                      "fill": "#E31D94",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "KtLjB",
+                          "name": "c1badgeT",
+                          "fill": "#FFFFFF",
+                          "content": "MVP",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "xyYRi",
+                      "name": "c1id",
+                      "fill": "#FFFFFF",
+                      "content": "C1 — See cycle visually",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "MwyoC",
+                      "name": "c1job",
+                      "fill": "#CCCCCC",
+                      "content": "When I go to My Cycle, I want to see a visual representation of my full cycle with phases color-coded so I can understand my body's rhythm at a glance.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "dbFoy",
+                      "name": "c1crit",
+                      "fill": "#4A9B6E",
+                      "content": "✓ Cycle ring with 4-color phase system\n✓ Current day highlighted\n✓ Future days show predictions",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "XoBe8",
+                  "name": "C2",
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#333333"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "StuVv",
+                      "name": "c2badge",
+                      "fill": "#E31D94",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "m6Pqj",
+                          "name": "c2badgeT",
+                          "fill": "#FFFFFF",
+                          "content": "MVP",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "1wtaj",
+                      "name": "c2id",
+                      "fill": "#FFFFFF",
+                      "content": "C2 — Review cycle history",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "EMjUw",
+                      "name": "c2job",
+                      "fill": "#CCCCCC",
+                      "content": "When I want to understand my patterns, I want to scroll through past cycles so I can see if they're regular, getting longer, or changing.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hzcmM",
+                      "name": "c2crit",
+                      "fill": "#4A9B6E",
+                      "content": "✓ Compare last 3+ cycles\n✓ Trend direction indicated\n✓ Logged symptoms visible per cycle",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "B6Xk3",
+                  "name": "C3",
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#333333"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "0Trzu",
+                      "name": "c3badge",
+                      "fill": "#E31D94",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "eij4W",
+                          "name": "c3badgeT",
+                          "fill": "#FFFFFF",
+                          "content": "MVP",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "Df0qg",
+                      "name": "c3id",
+                      "fill": "#FFFFFF",
+                      "content": "C3 — Log symptoms quickly",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ghN4p",
+                      "name": "c3job",
+                      "fill": "#CCCCCC",
+                      "content": "When I'm experiencing something notable, I want to log it in 1–2 taps so I can build a picture over time without homework.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "skVcr",
+                      "name": "c3crit",
+                      "fill": "#4A9B6E",
+                      "content": "✓ Chip-based selection\n✓ Pre-selected common symptoms\n✓ UI never guilts for skipping",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pJWzw",
+                  "name": "C4",
+                  "opacity": 0.7,
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#444444"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "RsFVH",
+                      "name": "c4badge",
+                      "fill": "#555555",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "mYyjJ",
+                          "name": "c4badgeT",
+                          "fill": "#CCCCCC",
+                          "content": "NEXT",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "Rr1Vz",
+                      "name": "c4id",
+                      "fill": "#AAAAAA",
+                      "content": "C4 — Understand symptom patterns",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Kn8s3",
+                      "name": "c4job",
+                      "fill": "#888888",
+                      "content": "When I've logged a few cycles, I want to see what patterns emerge so I can understand why I feel certain ways at certain times.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "LULoo",
+                      "name": "c4crit",
+                      "fill": "#666666",
+                      "content": "✓ Actionable language, not raw counts\n✓ Links to Health Assistant\n✓ Requires 3+ cycles of data",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "U6RHW",
+          "name": "Section: Shop",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "fByLd",
+              "name": "shopHeader",
+              "width": "fill_container",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "kGUkq",
+                  "name": "shopIcon",
+                  "width": 24,
+                  "height": 24,
+                  "iconFontName": "shopping-bag",
+                  "iconFontFamily": "lucide",
+                  "fill": "#C4A24E"
+                },
+                {
+                  "type": "text",
+                  "id": "sSj8R",
+                  "name": "shopTitle",
+                  "fill": "#FFFFFF",
+                  "content": "3 · SHOP",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "yD58Y",
+                  "name": "shopQ",
+                  "fill": "#C4A24E",
+                  "content": "\"What do I need and how do I get it?\"",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "fontStyle": "italic"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "MnIXI",
+              "name": "shopRow",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "sWiPS",
+                  "name": "S1",
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#333333"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "XL4we",
+                      "name": "s1badge",
+                      "fill": "#E31D94",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "jerfs",
+                          "name": "s1badgeT",
+                          "fill": "#FFFFFF",
+                          "content": "MVP",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "l2ZG3",
+                      "name": "s1id",
+                      "fill": "#FFFFFF",
+                      "content": "S1 — Flow-based recommendations",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Ppjqm",
+                      "name": "s1job",
+                      "fill": "#CCCCCC",
+                      "content": "When I need products, I want to see recommendations based on my actual flow data so I can buy the right absorbency without guessing.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "6SHFm",
+                      "name": "s1crit",
+                      "fill": "#4A9B6E",
+                      "content": "✓ Helpful framing, not salesy\n✓ \"Super for days 1–2, Regular from day 3\"\n✓ Curated suggestion, not a catalog",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zdr5U",
+                  "name": "S2",
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#333333"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "bBtiV",
+                      "name": "s2badge",
+                      "fill": "#E31D94",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "0ttEZ",
+                          "name": "s2badgeT",
+                          "fill": "#FFFFFF",
+                          "content": "MVP",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "FmnjE",
+                      "name": "s2id",
+                      "fill": "#FFFFFF",
+                      "content": "S2 — Buy quickly",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Bg7Wr",
+                      "name": "s2job",
+                      "fill": "#CCCCCC",
+                      "content": "When I've decided what I need, I want to purchase in as few taps as possible so I can get it done and move on.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "OcY6u",
+                      "name": "s2crit",
+                      "fill": "#4A9B6E",
+                      "content": "✓ One-tap reorder for previous purchases\n✓ 3 taps or fewer to complete\n✓ No dark patterns",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zpqSm",
+                  "name": "S3",
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#333333"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ZTBfG",
+                      "name": "s3badge",
+                      "fill": "#E31D94",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "DCUgj",
+                          "name": "s3badgeT",
+                          "fill": "#FFFFFF",
+                          "content": "MVP",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "00Ytf",
+                      "name": "s3id",
+                      "fill": "#FFFFFF",
+                      "content": "S3 — Cycle-adaptive subscription",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ktrYs",
+                      "name": "s3job",
+                      "fill": "#CCCCCC",
+                      "content": "When I'm tired of remembering to buy products, I want auto-delivery timed to my cycle so I always have what I need.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mbGMn",
+                      "name": "s3crit",
+                      "fill": "#4A9B6E",
+                      "content": "✓ Adapts to predicted cycle start\n✓ Easy pause/cancel — one tap, no guilt\n✓ Shows savings vs. one-time",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "0zg0R",
+                  "name": "S4",
+                  "opacity": 0.7,
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#444444"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vbRxL",
+                      "name": "s4badge",
+                      "fill": "#555555",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "L9fCm",
+                          "name": "s4badgeT",
+                          "fill": "#CCCCCC",
+                          "content": "NEXT",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "5TfyU",
+                      "name": "s4id",
+                      "fill": "#AAAAAA",
+                      "content": "S4 — See spending",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Iusq1",
+                      "name": "s4job",
+                      "fill": "#888888",
+                      "content": "When I'm curious about spending, I want to see annual cost and how a subscription compares so I can make an informed decision.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "dfEKP",
+                      "name": "s4crit",
+                      "fill": "#666666",
+                      "content": "✓ Clear number, not anxiety-inducing\n✓ Empowering tone\n✓ Optional view, not first in Shop",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "cYgAL",
+          "name": "Section: Health Assistant",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "K84uQ",
+              "name": "aiHeader",
+              "width": "fill_container",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "ZoThD",
+                  "name": "aiIcon",
+                  "width": 24,
+                  "height": 24,
+                  "iconFontName": "heart-pulse",
+                  "iconFontFamily": "lucide",
+                  "fill": "#9B7FC4"
+                },
+                {
+                  "type": "text",
+                  "id": "ZekES",
+                  "name": "aiTitle",
+                  "fill": "#FFFFFF",
+                  "content": "4 · HEALTH ASSISTANT",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "c2wS2",
+                  "name": "aiQ",
+                  "fill": "#9B7FC4",
+                  "content": "\"Why do I feel like this?\"",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "fontStyle": "italic"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "1rvRO",
+              "name": "aiRow",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "9Z3Qp",
+                  "name": "A1",
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#333333"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "9vjF9",
+                      "name": "a1badge",
+                      "fill": "#E31D94",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "UUQcO",
+                          "name": "a1badgeT",
+                          "fill": "#FFFFFF",
+                          "content": "MVP",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "3z4Kz",
+                      "name": "a1id",
+                      "fill": "#FFFFFF",
+                      "content": "A1 — Ask \"why do I feel like this?\"",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zSxrm",
+                      "name": "a1job",
+                      "fill": "#CCCCCC",
+                      "content": "When I'm experiencing something uncomfortable, I want to ask the Health Assistant what's going on so I can understand my body.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "tpVEi",
+                      "name": "a1crit",
+                      "fill": "#4A9B6E",
+                      "content": "✓ Conversational UI, not a search engine\n✓ Response references current phase\n✓ Warm, direct, evidence-based tone",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vrmMO",
+                  "name": "A2",
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#333333"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "4Nd01",
+                      "name": "a2badge",
+                      "fill": "#E31D94",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "BynXb",
+                          "name": "a2badgeT",
+                          "fill": "#FFFFFF",
+                          "content": "MVP",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "kxg8w",
+                      "name": "a2id",
+                      "fill": "#FFFFFF",
+                      "content": "A2 — Learn about current phase",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "FGKin",
+                      "name": "a2job",
+                      "fill": "#CCCCCC",
+                      "content": "When I'm curious, I want to browse educational content about my current phase so I can understand my body better over time.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "5NB30",
+                      "name": "a2crit",
+                      "fill": "#4A9B6E",
+                      "content": "✓ Content adapts to current phase\n✓ Short, scannable format\n✓ Primary engagement hook",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "4LY8n",
+                  "name": "A3",
+                  "opacity": 0.7,
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#444444"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "PPxcm",
+                      "name": "a3badge",
+                      "fill": "#555555",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "3uivx",
+                          "name": "a3badgeT",
+                          "fill": "#CCCCCC",
+                          "content": "NEXT",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "ArxIi",
+                      "name": "a3id",
+                      "fill": "#AAAAAA",
+                      "content": "A3 — Inline product suggestion",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Raklf",
+                      "name": "a3job",
+                      "fill": "#888888",
+                      "content": "When the Health Assistant mentions a symptom, I want to see a relevant product suggestion inline so I can act without switching contexts.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hWjID",
+                      "name": "a3crit",
+                      "fill": "#666666",
+                      "content": "✓ Small, non-intrusive product card\n✓ User must opt in to see more\n✓ Health answer always comes first",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "OxM8s",
+                  "name": "A4",
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#333333"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "CR1GV",
+                      "name": "a4badge",
+                      "fill": "#E31D94",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "hain5",
+                          "name": "a4badgeT",
+                          "fill": "#FFFFFF",
+                          "content": "MVP",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "i3Ssy",
+                      "name": "a4id",
+                      "fill": "#FFFFFF",
+                      "content": "A4 — Know when to see a doctor",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yfWNp",
+                      "name": "a4job",
+                      "fill": "#CCCCCC",
+                      "content": "When the Assistant identifies something concerning, I want to be told clearly to consult a professional so I can take action.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "MyDkf",
+                      "name": "a4crit",
+                      "fill": "#4A9B6E",
+                      "content": "✓ Distinct visual treatment\n✓ Caring tone, not scary\n✓ Never diagnoses",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "DFGcs",
+          "name": "Section: Cross-Cutting",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "1q5PK",
+              "name": "xHeader",
+              "width": "fill_container",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "xT7k2",
+                  "name": "xIcon",
+                  "width": 24,
+                  "height": 24,
+                  "iconFontName": "layers",
+                  "iconFontFamily": "lucide",
+                  "fill": "#E694C5"
+                },
+                {
+                  "type": "text",
+                  "id": "HmLBy",
+                  "name": "xTitle",
+                  "fill": "#FFFFFF",
+                  "content": "5 · CROSS-CUTTING",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "m8prn",
+                  "name": "xQ",
+                  "fill": "#E694C5",
+                  "content": "\"Can I trust this and make it mine?\"",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "fontStyle": "italic"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Axt39",
+              "name": "xRow",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Mc1ew",
+                  "name": "X1",
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#333333"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ixHOg",
+                      "name": "x1badge",
+                      "fill": "#E31D94",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "EKHka",
+                          "name": "x1badgeT",
+                          "fill": "#FFFFFF",
+                          "content": "MVP",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "3C19h",
+                      "name": "x1id",
+                      "fill": "#FFFFFF",
+                      "content": "X1 — No-account onboarding",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "C72Kx",
+                      "name": "x1job",
+                      "fill": "#CCCCCC",
+                      "content": "When I download the app, I want to start tracking immediately without signing up so I can try it before committing any personal info.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ehF5f",
+                      "name": "x1crit",
+                      "fill": "#4A9B6E",
+                      "content": "✓ Home screen in under 60 seconds\n✓ Ask only cycle length + last period date\n✓ No email, no name, no account",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "SA2cb",
+                  "name": "X2",
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#333333"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Tr0zz",
+                      "name": "x2badge",
+                      "fill": "#E31D94",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "1S69a",
+                          "name": "x2badgeT",
+                          "fill": "#FFFFFF",
+                          "content": "MVP",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "U89az",
+                      "name": "x2id",
+                      "fill": "#FFFFFF",
+                      "content": "X2 — Widget glance",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "LKsVi",
+                      "name": "x2job",
+                      "fill": "#CCCCCC",
+                      "content": "When I glance at my phone, I want to see my cycle day and phase on a widget so I can stay aware without opening anything.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Pjcbd",
+                      "name": "x2crit",
+                      "fill": "#4A9B6E",
+                      "content": "✓ \"Day 14 · Follicular\" with phase-color\n✓ Discreet mode option\n✓ Status in under 1 second",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "AK7Zo",
+                  "name": "X3",
+                  "opacity": 0.7,
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#444444"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "H1k0c",
+                      "name": "x3badge",
+                      "fill": "#555555",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "o9sVU",
+                          "name": "x3badgeT",
+                          "fill": "#CCCCCC",
+                          "content": "NEXT",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "pgKOz",
+                      "name": "x3id",
+                      "fill": "#AAAAAA",
+                      "content": "X3 — Useful-only notifications",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "CJtVW",
+                      "name": "x3job",
+                      "fill": "#888888",
+                      "content": "When something important is predicted, I want one useful notification so I can act on it — not dismiss it.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "xJ8ut",
+                      "name": "x3crit",
+                      "fill": "#666666",
+                      "content": "✓ Default OFF — user opts in\n✓ Max 1/day, always actionable\n✓ Never guilt-trips for inactivity",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Y2giN",
+                  "name": "X4",
+                  "opacity": 0.7,
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#444444"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "5Clr9",
+                      "name": "x4badge",
+                      "fill": "#555555",
+                      "cornerRadius": 20,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "QwIVi",
+                          "name": "x4badgeT",
+                          "fill": "#CCCCCC",
+                          "content": "NEXT",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "AIQbH",
+                      "name": "x4id",
+                      "fill": "#AAAAAA",
+                      "content": "X4 — Make it mine",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "AyAsE",
+                      "name": "x4job",
+                      "fill": "#888888",
+                      "content": "When I'm settling in, I want to adjust the look and what I see so I can feel like it's my personal space.",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "X6nAR",
+                      "name": "x4crit",
+                      "fill": "#666666",
+                      "content": "✓ Light/dark mode toggle\n✓ Dashboard card reordering\n✓ Discreet app icon option",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "Hu0oi",
+          "name": "flowDivider",
+          "fill": "#333333",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "XUyca",
+          "name": "MVP Flow Summary",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "Yder4",
+              "name": "flowTitle",
+              "fill": "#E31D94",
+              "content": "MVP FLOW SUMMARY",
+              "fontFamily": "Inter",
+              "fontSize": 22,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "PFfK7",
+              "name": "flowSub",
+              "fill": "#888888",
+              "content": "The minimum viable user journey through the JTBD",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "NplP0",
+              "name": "flowRow",
+              "width": "fill_container",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "P2ZoM",
+                  "name": "f1",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#E694C5"
+                  },
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "j67gA",
+                      "name": "f1t",
+                      "fill": "#E694C5",
+                      "content": "X1",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "U2jzm",
+                      "name": "f1s",
+                      "fill": "#888888",
+                      "content": "Onboarding\n~60s",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "pqtgR",
+                  "name": "arrow1",
+                  "fill": "#555555",
+                  "content": "→",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "Ubpcc",
+                  "name": "f2",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#C75B3A"
+                  },
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hWCee",
+                      "name": "f2t",
+                      "fill": "#C75B3A",
+                      "content": "H1+H2+H4",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZcPov",
+                      "name": "f2s",
+                      "fill": "#888888",
+                      "content": "Home\nCycle + Insight + Privacy",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "QyGZr",
+                  "name": "arrow2",
+                  "fill": "#555555",
+                  "content": "→",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "RSRYH",
+                  "name": "f3",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#C75B3A"
+                  },
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Shz46",
+                      "name": "f3t",
+                      "fill": "#C75B3A",
+                      "content": "H3",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "lDCyZ",
+                      "name": "f3s",
+                      "fill": "#888888",
+                      "content": "Log Period\n2 taps",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "eqYR1",
+                  "name": "arrow3",
+                  "fill": "#555555",
+                  "content": "→",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "udeAR",
+                  "name": "f4",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#9B7FC4"
+                  },
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PBmcU",
+                      "name": "f4t",
+                      "fill": "#9B7FC4",
+                      "content": "A1+A2",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "EbZ0i",
+                      "name": "f4s",
+                      "fill": "#888888",
+                      "content": "Health Assistant\nLearn + Ask",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "mJG5d",
+                  "name": "arrow4",
+                  "fill": "#555555",
+                  "content": "→",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "9H7a1",
+                  "name": "f5",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#C4A24E"
+                  },
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "u5Omb",
+                      "name": "f5t",
+                      "fill": "#C4A24E",
+                      "content": "S1+S2+S3",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mBB8x",
+                      "name": "f5s",
+                      "fill": "#888888",
+                      "content": "Shop\nBuy + Subscribe",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "lsXrr",
+                  "name": "arrow5",
+                  "fill": "#555555",
+                  "content": "→",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "hXU2z",
+                  "name": "f6",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#4A9B6E"
+                  },
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "TWzAw",
+                      "name": "f6t",
+                      "fill": "#4A9B6E",
+                      "content": "X2",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zekRz",
+                      "name": "f6s",
+                      "fill": "#888888",
+                      "content": "Widget\nPassive glance",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "FHNtZ",
+              "name": "statsRow",
+              "width": "fill_container",
+              "gap": 24,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "1A7RI",
+                  "name": "stat1",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "gH7TC",
+                      "name": "stat1dot",
+                      "width": 12,
+                      "height": 12,
+                      "fill": "#E31D94",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "text",
+                      "id": "ltk2X",
+                      "name": "stat1t",
+                      "fill": "#FFFFFF",
+                      "content": "14 MVP jobs",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "YCplv",
+                  "name": "stat2",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "pHztk",
+                      "name": "stat2dot",
+                      "width": 12,
+                      "height": 12,
+                      "fill": "#555555",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "text",
+                      "id": "Rg7Ue",
+                      "name": "stat2t",
+                      "fill": "#888888",
+                      "content": "4 Next-iteration jobs",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "b78oG",
+                  "name": "stat3",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vL4PD",
+                      "name": "stat3dot",
+                      "width": 12,
+                      "height": 12,
+                      "fill": "#4A9B6E",
+                      "cornerRadius": 6
+                    },
+                    {
+                      "type": "text",
+                      "id": "m8yVw",
+                      "name": "stat3t",
+                      "fill": "#4A9B6E",
+                      "content": "Every MVP job maps to a P0 requirement in the PRD",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "RQf09",
+          "name": "tagline",
+          "fill": "#E31D94",
+          "content": "\"Log less, learn more\"",
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 28,
+          "fontWeight": "700"
+        }
+      ]
+    }
+  ]
+}
