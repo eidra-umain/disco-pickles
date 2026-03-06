@@ -3,7 +3,7 @@
 ## Tech Stack
 - **Frontend:** Flutter 3.41 (Dart)
 - **Backend:** TBD
-- **Database:** TBD (on-device, SQLite or similar)
+- **Database:** SQLite via drift (on-device, offline-first)
 - **Infrastructure:** GitHub Actions CI/CD
 - **Linting:** `very_good_analysis` (strict Dart linting) + `dart format`
 - **Project location:** `mobile/`

@@ -59,17 +59,17 @@
 
 ## TASK-004: On-device data layer
 
-**Status:** pending
-**Owner:** unassigned
+**Status:** done
+**Owner:** claude
 **Priority:** high
 
 ### Acceptance Criteria
-- [ ] Local storage solution chosen and implemented (SQLite, Realm, or equivalent)
-- [ ] Cycle data schema defined (periods, symptoms, moods, flow levels)
-- [ ] Offline-first architecture — all tracking works without network
-- [ ] No account required for core tracking functionality
-- [ ] Data persistence across app restarts
-- [ ] Migration strategy for future schema changes
+- [x] Local storage solution chosen and implemented (SQLite, Realm, or equivalent)
+- [x] Cycle data schema defined (periods, symptoms, moods, flow levels)
+- [x] Offline-first architecture — all tracking works without network
+- [x] No account required for core tracking functionality
+- [x] Data persistence across app restarts
+- [x] Migration strategy for future schema changes
 
 ---
 
