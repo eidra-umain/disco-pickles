@@ -59,6 +59,12 @@ When the user wants to start work on something:
    git push -u origin <branch-name>
    ```
 
+5. **Log to devlog:** Add an entry to `docs/devlog.md`:
+   ```markdown
+   - `HH:MM` [<branch-name>] Branch created from main
+   ```
+   If the devlog file doesn't exist, create it first (see devlog skill for template).
+
 Tell the user what branch was created and that it's tracking the remote.
 
 ## Committing Changes
@@ -91,6 +97,12 @@ When the user wants to commit:
    git push
    ```
 
+6. **Log to devlog:** After each commit, add an entry to `docs/devlog.md`:
+   ```markdown
+   - `HH:MM` [context] COMMIT: <short-hash> — <commit message>
+   ```
+   Where `[context]` is the PR number if one exists, otherwise the branch name.
+
 ## Opening a Pull Request
 
 Use the `gh` CLI for PR operations. Before opening:
@@ -106,6 +118,12 @@ If there's a PR template, populate its sections. If the repo links PRs to issues
 
 For the PR title, match the style of recent merged PRs in the repo.
 
+4. **Log to devlog:** After creating the PR, add an entry to `docs/devlog.md`:
+   ```markdown
+   - `HH:MM` [PR-XXX] PR opened: <title>
+   ```
+   Also update any recent entries that used the branch name as context to use the PR number instead.
+
 ## Merging
 
 When the user wants to merge:
@@ -116,7 +134,14 @@ When the user wants to merge:
    gh pr checks
    ```
 
-2. If checks pass and it's approved, merge using the repo's preferred strategy:
+2. **Check devlog for learnings:** Before merging, check if the Learnings section in `docs/devlog.md` has an entry for this PR. If not, remind the user:
+   ```
+   The devlog has no learnings recorded for PR-XXX.
+   Consider adding insights before merging: /devlog learn "your reflection"
+   ```
+   This is a **warning only** — do not block the merge.
+
+3. If checks pass and it's approved, merge using the repo's preferred strategy:
    ```bash
    # Check what merge strategies the repo tends to use
    gh pr list --state merged --limit 5 --json mergeCommit,title
@@ -125,7 +150,12 @@ When the user wants to merge:
    gh pr merge --squash   # or --merge or --rebase depending on convention
    ```
 
-3. Clean up the branch after merge:
+4. **Log to devlog:** After merging, add an entry:
+   ```markdown
+   - `HH:MM` [PR-XXX] Merged into main
+   ```
+
+5. Clean up the branch after merge:
    ```bash
    git checkout main && git pull
    git branch -d <branch-name>
