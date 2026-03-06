@@ -2,11 +2,186 @@
 name: github
 description: |
   Full Git and GitHub workflow skill — branching, commits, PRs, merges, rebasing, and conflict resolution using the `gh` CLI and `git`. Use this skill whenever the user asks to create a branch, open a PR, merge changes, rebase, resolve conflicts, check PR status, manage releases, or do anything involving git operations in a repository. Also trigger when the user references task IDs (like TASK-001) and wants to start working on them, since that implies branch creation and workflow setup. If the user says "start working on TASK-X", "ship this", "open a PR", "merge", "rebase", or mentions branches in any way, use this skill.
+
+  ALSO trigger this skill when users use beginner-friendly language like: "save my work", "sync", "backup", "upload to cloud", "share my progress", "let others see my work", "save to GitHub", "push my changes", "update the cloud", or any variation suggesting they want to preserve or share their work without knowing Git terminology.
 ---
 
 # GitHub Workflow
 
 This skill handles the full Git + GitHub lifecycle: branching, committing, pushing, opening PRs, merging, rebasing, and resolving conflicts. It auto-detects conventions from the repo rather than imposing its own.
+
+---
+
+## Beginner-Friendly Operations
+
+These operations are for users who don't know Git. When they use casual language like "save my work", "sync", "backup", or "share progress", use these simplified workflows. **Always explain what you're doing in plain language** — avoid Git jargon unless explaining it.
+
+### Save My Work / Sync to Cloud
+
+When the user says things like "save my work", "sync", "backup to cloud", "upload my changes", or "save to GitHub":
+
+1. First, check what's changed and the current state:
+   ```bash
+   git status
+   git log --oneline -1  # see where we are
+   ```
+
+2. If there are changes to save, explain what files changed in plain terms:
+   > "I found 3 files you've changed: `app.py`, `README.md`, and a new file `config.json`. I'll save these to the cloud."
+
+3. Save everything (stage and commit):
+   ```bash
+   git add -A
+   git commit -m "Save progress: <brief description of what changed>"
+   ```
+   Use a simple, descriptive message. If task IDs are used in the repo, include them.
+
+4. Upload to the cloud:
+   ```bash
+   git push
+   ```
+
+5. If push fails due to remote changes, pull first and retry:
+   ```bash
+   git pull --rebase
+   git push
+   ```
+
+6. Confirm success in plain language:
+   > "Done! Your work is now saved to the cloud. Anyone with access to this project can see your latest changes."
+
+### Share My Progress / Let Others See My Work
+
+When the user wants to share their work or let teammates see what they've done:
+
+1. First, save any unsaved work (use the "Save My Work" flow above)
+
+2. Check if we're on a branch or main:
+   ```bash
+   git branch --show-current
+   ```
+
+3. **If on main**: Their work is already visible after pushing. Explain:
+   > "Your changes are now on the main project. Everyone with access can see them!"
+
+4. **If on a branch**: Offer to create a Pull Request so others can review:
+   ```bash
+   gh pr create --title "Work in progress: <description>" --body "Sharing my progress for feedback."
+   ```
+   Then provide the PR link:
+   > "I've created a link you can share: <PR URL>. Others can see your work and leave comments there."
+
+5. If they just want a quick link to share (no PR needed):
+   ```bash
+   # Get the repo URL and current branch
+   gh repo view --json url -q '.url'
+   git branch --show-current
+   ```
+   > "You can share this link: <repo-url>/tree/<branch-name> — it shows your current work."
+
+### Get Latest Changes / Update My Copy
+
+When the user says "get latest", "update", "sync down", "download changes", or "what did others change":
+
+1. Save any local work first (if there are changes):
+   ```bash
+   git stash --include-untracked
+   ```
+
+2. Get the latest from the cloud:
+   ```bash
+   git pull
+   ```
+
+3. Restore their work on top:
+   ```bash
+   git stash pop
+   ```
+   If this causes conflicts, handle them gently (see "When Things Conflict" below).
+
+4. Explain what happened:
+   > "I've updated your copy with the latest changes from the cloud. You now have everyone's recent work."
+
+### What Changed? / Show Me the History
+
+When the user wants to see what's been happening:
+
+1. Show recent activity in plain terms:
+   ```bash
+   git log --oneline --all -10
+   ```
+
+2. Translate this into plain language:
+   > "Here's what's happened recently:
+   > - 2 hours ago: Sarah added the login page
+   > - Yesterday: You fixed the header bug
+   > - 2 days ago: Mike updated the database settings"
+
+3. If they want to see their own unsaved changes:
+   ```bash
+   git diff --stat
+   ```
+   > "You have changes in 2 files that haven't been saved to the cloud yet."
+
+### When Things Conflict
+
+If Git reports conflicts, don't panic the user. Explain simply:
+
+> "It looks like someone else changed the same file you were working on. Let me help sort this out."
+
+1. Show which files have conflicts:
+   ```bash
+   git diff --name-only --diff-filter=U
+   ```
+
+2. For each file, explain the situation:
+   > "In `app.py`, you changed line 42, but someone else also changed that line. Here's what each version looks like..."
+
+3. Ask the user which version they want, or offer to combine them:
+   > "Would you like to keep your version, their version, or should I try to combine both?"
+
+4. After resolving, complete the operation:
+   ```bash
+   git add <file>
+   git rebase --continue  # or git commit if merging
+   git push
+   ```
+
+5. Confirm:
+   > "All sorted! Your work is now saved and up to date with everyone else's changes."
+
+### Undo My Last Change / Go Back
+
+When the user wants to undo something:
+
+1. **If they haven't saved yet** (undo local edits):
+   > "I'll restore the files to how they were before your recent edits."
+   ```bash
+   git checkout -- <file>  # or git restore <file>
+   ```
+
+2. **If they just saved but haven't synced** (undo last commit):
+   > "I'll undo your last save, but keep your files as they are so you can make different changes."
+   ```bash
+   git reset --soft HEAD~1
+   ```
+
+3. **If they already synced to cloud** — be careful here:
+   > "Your changes are already on the cloud. Undoing them would affect anyone who's already seen them. Are you sure? I can create a new save that reverses the changes instead."
+
+   If they confirm, use a revert (safer than force push):
+   ```bash
+   git revert HEAD --no-edit
+   git push
+   ```
+
+---
+
+## Advanced Git Operations
+
+The sections below are for users comfortable with Git terminology, or when the beginner flows above need more precision.
+
+---
 
 ## Step 0: Detect Repo Conventions
 
