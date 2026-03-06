@@ -1,11 +1,12 @@
 # Project Configuration
 
 ## Tech Stack
-<!-- Update this section when tech stack is decided -->
-- **Frontend:** TBD
+- **Frontend:** Flutter 3.41 (Dart)
 - **Backend:** TBD
-- **Database:** TBD
-- **Infrastructure:** TBD
+- **Database:** TBD (on-device, SQLite or similar)
+- **Infrastructure:** GitHub Actions CI/CD
+- **Linting:** `very_good_analysis` (strict Dart linting) + `dart format`
+- **Project location:** `mobile/`
 
 ## Conventions
 
