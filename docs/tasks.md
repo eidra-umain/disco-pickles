@@ -3,28 +3,30 @@
 **Generated:** 2026-03-06 | **Source:** PRD, Design Spec, Technical Design
 **Target:** MVP buildable in ~1 hour with Claude Code
 
+> **Note:** This is the MVP sprint breakdown. Task IDs use the `MVP-XXX` prefix to distinguish them from the canonical product task queue in [`/tasks.md`](../tasks.md) which uses `TASK-XXX`.
+
 ---
 
 ## Task Index
 
 | ID | Title | Complexity | Priority | Dependencies | Status |
 |----|-------|------------|----------|--------------|--------|
-| TASK-001 | Configure Project Dependencies | S | P0 | — | pending |
-| TASK-002 | Implement Core Data Models | S | P0 | TASK-001 | pending |
-| TASK-003 | Set Up Drift Database | M | P0 | TASK-002 | pending |
-| TASK-004 | Create Riverpod Providers | S | P0 | TASK-003 | pending |
-| TASK-005 | Implement Phase Theme System | S | P0 | TASK-004 | pending |
-| TASK-006 | Set Up Navigation | S | P0 | TASK-001 | pending |
-| TASK-007 | Build CycleRing Widget | M | P0 | TASK-005 | pending |
-| TASK-008 | Build Home Dashboard | M | P0 | TASK-007 | pending |
-| TASK-009 | Build Daily Log Screen | M | P0 | TASK-004 | pending |
-| TASK-010 | Build Cycle Detail Screen | M | P1 | TASK-008 | pending |
-| TASK-011 | Build Shop Browse Screen | M | P1 | TASK-006 | pending |
-| TASK-012 | Build Health Assistant Screen | M | P2 | TASK-006 | pending |
+| MVP-001 | Configure Project Dependencies | S | P0 | — | pending |
+| MVP-002 | Implement Core Data Models | S | P0 | MVP-001 | pending |
+| MVP-003 | Set Up Drift Database | M | P0 | MVP-002 | pending |
+| MVP-004 | Create Riverpod Providers | S | P0 | MVP-003 | pending |
+| MVP-005 | Implement Phase Theme System | S | P0 | MVP-004 | pending |
+| MVP-006 | Set Up Navigation | S | P0 | MVP-001 | pending |
+| MVP-007 | Build CycleRing Widget | M | P0 | MVP-005 | pending |
+| MVP-008 | Build Home Dashboard | M | P0 | MVP-007 | pending |
+| MVP-009 | Build Daily Log Screen | M | P0 | MVP-004 | pending |
+| MVP-010 | Build Cycle Detail Screen | M | P1 | MVP-008 | pending |
+| MVP-011 | Build Shop Browse Screen | M | P1 | MVP-006 | pending |
+| MVP-012 | Build Health Assistant Screen | M | P2 | MVP-006 | pending |
 
 ---
 
-## TASK-001: Configure Project Dependencies
+## MVP-001: Configure Project Dependencies
 
 **Priority:** P0 | **Complexity:** S | **Dependencies:** None
 
@@ -43,9 +45,9 @@ Update `pubspec.yaml` with required dependencies for state management, database,
 
 ---
 
-## TASK-002: Implement Core Data Models
+## MVP-002: Implement Core Data Models
 
-**Priority:** P0 | **Complexity:** S | **Dependencies:** TASK-001
+**Priority:** P0 | **Complexity:** S | **Dependencies:** MVP-001
 
 **Description:**
 Create Freezed data models for Phase, Cycle, and DailyLog with computed properties.
@@ -62,9 +64,9 @@ Create Freezed data models for Phase, Cycle, and DailyLog with computed properti
 
 ---
 
-## TASK-003: Set Up Drift Database
+## MVP-003: Set Up Drift Database
 
-**Priority:** P0 | **Complexity:** M | **Dependencies:** TASK-002
+**Priority:** P0 | **Complexity:** M | **Dependencies:** MVP-002
 
 **Description:**
 Configure Drift database with tables for cycles, daily logs, and settings.
@@ -80,9 +82,9 @@ Configure Drift database with tables for cycles, daily logs, and settings.
 
 ---
 
-## TASK-004: Create Riverpod Providers
+## MVP-004: Create Riverpod Providers
 
-**Priority:** P0 | **Complexity:** S | **Dependencies:** TASK-003
+**Priority:** P0 | **Complexity:** S | **Dependencies:** MVP-003
 
 **Description:**
 Set up core Riverpod providers for cycle state and database access.
@@ -99,9 +101,9 @@ Set up core Riverpod providers for cycle state and database access.
 
 ---
 
-## TASK-005: Implement Phase Theme System
+## MVP-005: Implement Phase Theme System
 
-**Priority:** P0 | **Complexity:** S | **Dependencies:** TASK-004
+**Priority:** P0 | **Complexity:** S | **Dependencies:** MVP-004
 
 **Description:**
 Create phase-adaptive theming with four color palettes.
@@ -117,9 +119,9 @@ Create phase-adaptive theming with four color palettes.
 
 ---
 
-## TASK-006: Set Up Navigation
+## MVP-006: Set Up Navigation
 
-**Priority:** P0 | **Complexity:** S | **Dependencies:** TASK-001
+**Priority:** P0 | **Complexity:** S | **Dependencies:** MVP-001
 
 **Description:**
 Configure go_router with bottom tab navigation.
@@ -135,9 +137,9 @@ Configure go_router with bottom tab navigation.
 
 ---
 
-## TASK-007: Build CycleRing Widget
+## MVP-007: Build CycleRing Widget
 
-**Priority:** P0 | **Complexity:** M | **Dependencies:** TASK-005
+**Priority:** P0 | **Complexity:** M | **Dependencies:** MVP-005
 
 **Description:**
 Custom paint widget showing cycle progress with phase-colored segments.
@@ -154,9 +156,9 @@ Custom paint widget showing cycle progress with phase-colored segments.
 
 ---
 
-## TASK-008: Build Home Dashboard
+## MVP-008: Build Home Dashboard
 
-**Priority:** P0 | **Complexity:** M | **Dependencies:** TASK-007
+**Priority:** P0 | **Complexity:** M | **Dependencies:** MVP-007
 
 **Description:**
 Home screen with CycleRing, phase banner, and quick actions.
@@ -174,9 +176,9 @@ Home screen with CycleRing, phase banner, and quick actions.
 
 ---
 
-## TASK-009: Build Daily Log Screen
+## MVP-009: Build Daily Log Screen
 
-**Priority:** P0 | **Complexity:** M | **Dependencies:** TASK-004
+**Priority:** P0 | **Complexity:** M | **Dependencies:** MVP-004
 
 **Description:**
 Modal screen for logging daily symptoms, flow, and mood.
@@ -195,9 +197,9 @@ Modal screen for logging daily symptoms, flow, and mood.
 
 ---
 
-## TASK-010: Build Cycle Detail Screen
+## MVP-010: Build Cycle Detail Screen
 
-**Priority:** P1 | **Complexity:** M | **Dependencies:** TASK-008
+**Priority:** P1 | **Complexity:** M | **Dependencies:** MVP-008
 
 **Description:**
 My Cycle tab showing detailed cycle view and stats.
@@ -214,9 +216,9 @@ My Cycle tab showing detailed cycle view and stats.
 
 ---
 
-## TASK-011: Build Shop Browse Screen
+## MVP-011: Build Shop Browse Screen
 
-**Priority:** P1 | **Complexity:** M | **Dependencies:** TASK-006
+**Priority:** P1 | **Complexity:** M | **Dependencies:** MVP-006
 
 **Description:**
 Shop tab with product grid and phase filtering (mock data).
@@ -233,9 +235,9 @@ Shop tab with product grid and phase filtering (mock data).
 
 ---
 
-## TASK-012: Build Health Assistant Screen
+## MVP-012: Build Health Assistant Screen
 
-**Priority:** P2 | **Complexity:** M | **Dependencies:** TASK-006
+**Priority:** P2 | **Complexity:** M | **Dependencies:** MVP-006
 
 **Description:**
 Assistant tab with chat UI (placeholder/mock responses).
@@ -256,20 +258,20 @@ Assistant tab with chat UI (placeholder/mock responses).
 ## Dependency Graph
 
 ```
-TASK-001 (Dependencies)
-    |-- TASK-002 (Models)
-    |       |-- TASK-003 (Database)
-    |               |-- TASK-004 (Providers)
-    |                       |-- TASK-005 (Theme)
-    |                               |-- TASK-007 (CycleRing)
-    |                                       |-- TASK-008 (Home)
-    |                                               |-- TASK-010 (Cycle Detail)
-    |-- TASK-006 (Navigation)
-            |-- TASK-011 (Shop)
-            |-- TASK-012 (Assistant)
+MVP-001 (Dependencies)
+    |-- MVP-002 (Models)
+    |       |-- MVP-003 (Database)
+    |               |-- MVP-004 (Providers)
+    |                       |-- MVP-005 (Theme)
+    |                               |-- MVP-007 (CycleRing)
+    |                                       |-- MVP-008 (Home)
+    |                                               |-- MVP-010 (Cycle Detail)
+    |-- MVP-006 (Navigation)
+            |-- MVP-011 (Shop)
+            |-- MVP-012 (Assistant)
 
-TASK-004 (Providers)
-    |-- TASK-009 (Daily Log)
+MVP-004 (Providers)
+    |-- MVP-009 (Daily Log)
 ```
 
 ---
@@ -278,14 +280,14 @@ TASK-004 (Providers)
 
 For fastest parallel execution with Claude:
 
-1. **TASK-001** - Dependencies (~2 min)
-2. **TASK-002 + TASK-006** - Models + Navigation in parallel (~5 min)
-3. **TASK-003** - Database (~5 min)
-4. **TASK-004** - Providers (~3 min)
-5. **TASK-005** - Theme (~3 min)
-6. **TASK-007 + TASK-009** - CycleRing + Daily Log in parallel (~8 min)
-7. **TASK-008** - Home Dashboard (~8 min)
-8. **TASK-010 + TASK-011 + TASK-012** - Remaining screens in parallel (~10 min)
+1. **MVP-001** - Dependencies (~2 min)
+2. **MVP-002 + MVP-006** - Models + Navigation in parallel (~5 min)
+3. **MVP-003** - Database (~5 min)
+4. **MVP-004** - Providers (~3 min)
+5. **MVP-005** - Theme (~3 min)
+6. **MVP-007 + MVP-009** - CycleRing + Daily Log in parallel (~8 min)
+7. **MVP-008** - Home Dashboard (~8 min)
+8. **MVP-010 + MVP-011 + MVP-012** - Remaining screens in parallel (~10 min)
 
 **Total estimated time: ~45-60 minutes**
 
