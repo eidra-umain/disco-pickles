@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Libresse — Brand Visual Language</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --cerise: #E31D94;
+    --light-pink: #E694C5;
+    --deep-blue: #1A237E;
+    --cyan: #00BCD4;
+    --charcoal: #2D2D2D;
+    --warm-white: #FDF8F4;
+    --light-gray: #E8E4E0;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #FAFAFA;
+    color: var(--charcoal);
+    line-height: 1.6;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--cerise) 0%, #C2185B 50%, var(--deep-blue) 100%);
+    color: white;
+    padding: 80px 48px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: 'V';
+    position: absolute;
+    right: -40px;
+    top: -60px;
+    font-size: 400px;
+    font-weight: 900;
+    opacity: 0.08;
+    line-height: 1;
+  }
+  .hero-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .hero p {
+    font-size: 18px;
+    max-width: 640px;
+    opacity: 0.85;
+    line-height: 1.7;
+  }
+  .hero-meta {
+    margin-top: 32px;
+    display: flex;
+    gap: 32px;
+    font-size: 13px;
+    opacity: 0.6;
+  }
+
+  /* LAYOUT */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .section {
+    padding: 64px 0;
+  }
+  .section + .section {
+    border-top: 1px solid #E8E4E0;
+  }
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--cerise);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .section-desc {
+    font-size: 16px;
+    color: #666;
+    max-width: 600px;
+    margin-bottom: 40px;
+  }
+
+  /* COLOR PALETTE */
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  .color-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: transform 0.2s;
+  }
+  .color-card:hover { transform: translateY(-4px); }
+  .color-swatch {
+    height: 140px;
+    position: relative;
+  }
+  .color-swatch .hex-overlay {
+    position: absolute;
+    bottom: 12px;
+    left: 16px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    color: white;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  }
+  .color-info {
+    padding: 16px 20px;
+  }
+  .color-name {
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  .color-role {
+    font-size: 13px;
+    color: #888;
+  }
+  .color-primary .color-swatch { background: var(--cerise); }
+  .color-secondary .color-swatch { background: var(--light-pink); }
+  .color-deep-blue .color-swatch { background: var(--deep-blue); }
+  .color-cyan .color-swatch { background: var(--cyan); }
+  .color-warm .color-swatch { background: var(--warm-white); border-bottom: 1px solid #eee; }
+  .color-warm .hex-overlay { color: #999; text-shadow: none; }
+  .color-charcoal .color-swatch { background: var(--charcoal); }
+  .color-gray .color-swatch { background: var(--light-gray); border-bottom: 1px solid #ddd; }
+  .color-gray .hex-overlay { color: #888; text-shadow: none; }
+  .color-blood .color-swatch {
+    background: linear-gradient(135deg, #B71C1C 0%, #D32F2F 50%, #C62828 100%);
+  }
+
+  /* GRADIENT BAR */
+  .gradient-bar {
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--deep-blue), var(--cyan));
+    margin: 32px 0 12px;
+    max-width: 400px;
+  }
+  .gradient-label { font-size: 13px; color: #888; }
+
+  /* TYPOGRAPHY */
+  .type-samples {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 8px;
+  }
+  .type-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 24px;
+    align-items: baseline;
+  }
+  .type-meta {
+    font-size: 12px;
+    color: #999;
+    line-height: 1.6;
+  }
+  .type-meta strong { color: #666; font-weight: 600; }
+  .type-sample-display { font-size: 48px; font-weight: 800; color: var(--charcoal); }
+  .type-sample-sub { font-size: 28px; font-weight: 600; color: #555; }
+  .type-sample-body { font-size: 16px; font-weight: 400; color: #666; max-width: 560px; }
+  .type-sample-small { font-size: 13px; font-weight: 500; color: #888; letter-spacing: 0.3px; }
+
+  /* IMAGERY */
+  .imagery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 768px) {
+    .imagery-grid { grid-template-columns: 1fr; }
+    .type-row { grid-template-columns: 1fr; }
+  }
+  .imagery-card {
+    border-radius: 16px;
+    padding: 32px;
+    background: white;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    position: relative;
+    overflow: hidden;
+  }
+  .imagery-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+  }
+  .imagery-card.photo::before { background: var(--cerise); }
+  .imagery-card.animation::before { background: linear-gradient(90deg, var(--deep-blue), var(--cyan)); }
+  .imagery-card.icon::before { background: var(--light-pink); }
+  .imagery-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .photo .imagery-icon { background: #FCE4EC; }
+  .animation .imagery-icon { background: #E3F2FD; }
+  .icon .imagery-icon { background: #F3E5F5; }
+  .imagery-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+  .imagery-card p { font-size: 14px; color: #666; line-height: 1.7; }
+  .imagery-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 16px;
+  }
+  .imagery-tag {
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: #F5F5F5;
+    color: #666;
+    font-weight: 500;
+  }
+
+  /* TONE */
+  .tone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .tone-card {
+    background: white;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border-left: 4px solid var(--cerise);
+  }
+  .tone-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+  .tone-card p { font-size: 13px; color: #666; }
+
+  .do-dont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 32px;
+  }
+  @media (max-width: 600px) { .do-dont { grid-template-columns: 1fr; } }
+  .do-box, .dont-box {
+    border-radius: 14px;
+    padding: 24px;
+  }
+  .do-box {
+    background: #E8F5E9;
+    border: 1px solid #C8E6C9;
+  }
+  .dont-box {
+    background: #FFEBEE;
+    border: 1px solid #FFCDD2;
+  }
+  .do-box h4, .dont-box h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .do-box h4 { color: #2E7D32; }
+  .dont-box h4 { color: #C62828; }
+  .do-box li, .dont-box li {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 6px;
+    list-style: none;
+    padding-left: 20px;
+    position: relative;
+  }
+  .do-box li::before { content: '✓'; position: absolute; left: 0; color: #2E7D32; font-weight: 700; }
+  .dont-box li::before { content: '✗'; position: absolute; left: 0; color: #C62828; font-weight: 700; }
+
+  /* CAMPAIGNS */
+  .campaign-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    padding-left: 32px;
+  }
+  .campaign-timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--cerise), var(--light-pink), var(--cyan));
+  }
+  .campaign-item {
+    position: relative;
+    background: white;
+    border-radius: 14px;
+    padding: 24px 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .campaign-item::before {
+    content: '';
+    position: absolute;
+    left: -29px;
+    top: 28px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--cerise);
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px var(--cerise);
+  }
+  .campaign-year {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--cerise);
+    margin-bottom: 4px;
+  }
+  .campaign-item h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+  .campaign-item p { font-size: 14px; color: #666; line-height: 1.7; }
+  .campaign-award {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 11px;
+    background: #FFF8E1;
+    color: #F57F17;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+
+  /* DESIGN IMPLICATIONS */
+  .implications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+  .implication-card {
+    background: white;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .implication-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--cerise), #C2185B);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .implication-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+  .implication-card p { font-size: 13px; color: #666; line-height: 1.6; }
+
+  /* PERSONALITY WHEEL */
+  .personality-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .personality-chip {
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid;
+    transition: transform 0.2s;
+  }
+  .personality-chip:hover { transform: scale(1.05); }
+  .pc-1 { border-color: var(--cerise); color: var(--cerise); background: #FCE4EC; }
+  .pc-2 { border-color: #7B1FA2; color: #7B1FA2; background: #F3E5F5; }
+  .pc-3 { border-color: var(--deep-blue); color: var(--deep-blue); background: #E8EAF6; }
+  .pc-4 { border-color: #00796B; color: #00796B; background: #E0F2F1; }
+  .pc-5 { border-color: #E65100; color: #E65100; background: #FFF3E0; }
+  .pc-6 { border-color: #1565C0; color: #1565C0; background: #E3F2FD; }
+  .pc-7 { border-color: #AD1457; color: #AD1457; background: #FCE4EC; }
+
+  /* FOOTER */
+  .footer {
+    padding: 40px 0;
+    text-align: center;
+    color: #999;
+    font-size: 13px;
+    border-top: 1px solid #eee;
+  }
+  .footer a { color: var(--cerise); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="container">
+    <div class="hero-label">Brand Visual Language Research</div>
+    <h1>Libresse</h1>
+    <p>Bold, taboo-breaking feminine care brand by Essity. Unapologetic, body-positive, and empowering — making menstruation visible and normal through vibrant visual storytelling.</p>
+    <div class="hero-meta">
+      <span>Research date: March 6, 2026</span>
+      <span>Parent company: Essity</span>
+      <span>Market: 150+ countries</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- BRAND PERSONALITY -->
+  <div class="section">
+    <div class="section-label">01 — Identity</div>
+    <div class="section-title">Brand Personality</div>
+    <div class="section-desc">The core traits that define Libresse across every touchpoint.</div>
+    <div class="personality-row">
+      <span class="personality-chip pc-1">Confident</span>
+      <span class="personality-chip pc-2">Empowering</span>
+      <span class="personality-chip pc-3">Modern</span>
+      <span class="personality-chip pc-4">Inclusive</span>
+      <span class="personality-chip pc-5">Boundary-Breaking</span>
+      <span class="personality-chip pc-6">Authentic</span>
+      <span class="personality-chip pc-7">Accessible</span>
+    </div>
+  </div>
+
+  <!-- COLOR PALETTE -->
+  <div class="section">
+    <div class="section-label">02 — Color</div>
+    <div class="section-title">Color Palette</div>
+    <div class="section-desc">Bold cerise pink leads — not a soft, apologetic pink, but vibrant, eye-catching, and unapologetic.</div>
+    <div class="color-grid">
+      <div class="color-card color-primary">
+        <div class="color-swatch"><span class="hex-overlay">#E31D94</span></div>
+        <div class="color-info">
+          <div class="color-name">Cerise Pink</div>
+          <div class="color-role">Primary — Logo, CTAs, key brand elements</div>
+        </div>
+      </div>
+      <div class="color-card color-secondary">
+        <div class="color-swatch"><span class="hex-overlay">#E694C5</span></div>
+        <div class="color-info">
+          <div class="color-name">Light Pink</div>
+          <div class="color-role">Secondary — Accents, backgrounds, highlights</div>
+        </div>
+      </div>
+      <div class="color-card color-deep-blue">
+        <div class="color-swatch"><span class="hex-overlay">#1A237E</span></div>
+        <div class="color-info">
+          <div class="color-name">Deep Blue</div>
+          <div class="color-role">Rhombus base — Depth, contrast</div>
+        </div>
+      </div>
+      <div class="color-card color-cyan">
+        <div class="color-swatch"><span class="hex-overlay">#00BCD4</span></div>
+        <div class="color-info">
+          <div class="color-name">Cyan</div>
+          <div class="color-role">Gradient end — Freshness, modernity</div>
+        </div>
+      </div>
+      <div class="color-card color-warm">
+        <div class="color-swatch"><span class="hex-overlay">#FDF8F4</span></div>
+        <div class="color-info">
+          <div class="color-name">Warm White</div>
+          <div class="color-role">Background — Cards, surfaces</div>
+        </div>
+      </div>
+      <div class="color-card color-charcoal">
+        <div class="color-swatch"><span class="hex-overlay">#2D2D2D</span></div>
+        <div class="color-info">
+          <div class="color-name">Charcoal</div>
+          <div class="color-role">Text — Body copy, primary text</div>
+        </div>
+      </div>
+      <div class="color-card color-gray">
+        <div class="color-swatch"><span class="hex-overlay">#E8E4E0</span></div>
+        <div class="color-info">
+          <div class="color-name">Soft Gray</div>
+          <div class="color-role">Borders — Dividers, subtle separation</div>
+        </div>
+      </div>
+      <div class="color-card color-blood">
+        <div class="color-swatch"><span class="hex-overlay">#D32F2F</span></div>
+        <div class="color-info">
+          <div class="color-name">Blood Red</div>
+          <div class="color-role">Campaign — #BloodNormal realistic imagery</div>
+        </div>
+      </div>
+    </div>
+    <div class="gradient-bar"></div>
+    <div class="gradient-label">Signature gradient: Deep Blue → Cyan (rhombus element)</div>
+  </div>
+
+  <!-- TYPOGRAPHY -->
+  <div class="section">
+    <div class="section-label">03 — Typography</div>
+    <div class="section-title">Type System</div>
+    <div class="section-desc">Modern geometric sans-serif, single-family system. Clean, contemporary, readable at all sizes.</div>
+    <div class="type-samples">
+      <div class="type-row">
+        <div class="type-meta">
+          <strong>Display</strong><br>
+          Semi-bold to Bold<br>
+          28–48px
+        </div>
+        <div class="type-sample-display">Live Fearless</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <strong>Heading</strong><br>
+          Semi-bold<br>
+          20–28px
+        </div>
+        <div class="type-sample-sub">Your body, your story, your power</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <strong>Body</strong><br>
+          Regular<br>
+          14–16px
+        </div>
+        <div class="type-sample-body">We believe in making menstruation visible and normal. Not hidden. Not something to be ashamed of. We celebrate every body and every experience.</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <strong>Label / UI</strong><br>
+          Medium<br>
+          12–14px
+        </div>
+        <div class="type-sample-small">PERIOD CARE &nbsp;&middot;&nbsp; DAILY INTIMATE CARE &nbsp;&middot;&nbsp; V-ZONE WELLNESS</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IMAGERY -->
+  <div class="section">
+    <div class="section-label">04 — Imagery</div>
+    <div class="section-title">Visual Style</div>
+    <div class="section-desc">Documentary-realistic photography meets diverse animation storytelling.</div>
+    <div class="imagery-grid">
+      <div class="imagery-card photo">
+        <div class="imagery-icon">📷</div>
+        <h3>Photography</h3>
+        <p>Natural, documentary-style. Diverse women in authentic moments. Close-up and environmental framing. Unafraid to show reality.</p>
+        <div class="imagery-tags">
+          <span class="imagery-tag">Documentary</span>
+          <span class="imagery-tag">Natural light</span>
+          <span class="imagery-tag">Diverse subjects</span>
+          <span class="imagery-tag">Intimate framing</span>
+          <span class="imagery-tag">Unsaturated</span>
+        </div>
+      </div>
+      <div class="imagery-card animation">
+        <div class="imagery-icon">🎨</div>
+        <h3>Animation</h3>
+        <p>Multiple styles per campaign — 2D cell, stop-frame, hand-painted oil-on-glass. Each story gets its own visual treatment.</p>
+        <div class="imagery-tags">
+          <span class="imagery-tag">2D cell</span>
+          <span class="imagery-tag">Stop-frame</span>
+          <span class="imagery-tag">Oil-on-glass</span>
+          <span class="imagery-tag">Story-specific</span>
+          <span class="imagery-tag">Emotional</span>
+        </div>
+      </div>
+      <div class="imagery-card icon">
+        <div class="imagery-icon">◇</div>
+        <h3>Design Elements</h3>
+        <p>The "Power V" and rhombus are core shapes. Used as patterns, textures, and decorative elements across all touchpoints.</p>
+        <div class="imagery-tags">
+          <span class="imagery-tag">Pink V</span>
+          <span class="imagery-tag">Blue rhombus</span>
+          <span class="imagery-tag">Geometric</span>
+          <span class="imagery-tag">Flexible scale</span>
+          <span class="imagery-tag">Pattern-ready</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TONE OF VOICE -->
+  <div class="section">
+    <div class="section-label">05 — Voice</div>
+    <div class="section-title">Tone of Voice</div>
+    <div class="section-desc">Conversational, empowering, and unapologetically direct.</div>
+    <div class="tone-grid">
+      <div class="tone-card">
+        <h4>Direct & Honest</h4>
+        <p>Uses "period", "blood", "vulva" without euphemism. Punchy statements mixed with educational content.</p>
+      </div>
+      <div class="tone-card">
+        <h4>Empowering</h4>
+        <p>Focus on ability, strength, and confidence. "Live fearless" — celebratory without being preachy.</p>
+      </div>
+      <div class="tone-card">
+        <h4>Inclusive</h4>
+        <p>Every woman's experience is valid. Uses "women+" to include trans and non-binary individuals.</p>
+      </div>
+      <div class="tone-card">
+        <h4>Conversational</h4>
+        <p>Direct address ("you", "your") for personal connection. Occasionally irreverent or playful.</p>
+      </div>
+    </div>
+    <div class="do-dont">
+      <div class="do-box">
+        <h4>Brand voice does</h4>
+        <ul>
+          <li>Say "period" and "blood" directly</li>
+          <li>Celebrate body diversity</li>
+          <li>Use confident, short statements</li>
+          <li>Educate while empowering</li>
+          <li>Show real experiences, real blood</li>
+        </ul>
+      </div>
+      <div class="dont-box">
+        <h4>Brand voice avoids</h4>
+        <ul>
+          <li>Euphemisms ("that time of the month")</li>
+          <li>Clinical or medicalized language</li>
+          <li>Apologetic or muted messaging</li>
+          <li>"Girlish frivolity" stereotypes</li>
+          <li>Blue liquid imagery</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAMPAIGNS -->
+  <div class="section">
+    <div class="section-label">06 — Campaigns</div>
+    <div class="section-title">Key Campaigns</div>
+    <div class="section-desc">Award-winning creative that defines the brand's visual storytelling approach.</div>
+    <div class="campaign-timeline">
+      <div class="campaign-item">
+        <div class="campaign-year">2017</div>
+        <h3>#BloodNormal</h3>
+        <p>First brand to show real period blood in advertising, replacing the industry-standard blue liquid. Documentary-style footage directed by Daniel Wolfe with cinematography by Monika Lenczewska. Agency: AMV BBDO.</p>
+        <span class="campaign-award">Glass Lion Grand Prix — Cannes</span>
+      </div>
+      <div class="campaign-item">
+        <div class="campaign-year">2020</div>
+        <h3>#WombStories</h3>
+        <p>Multiple animation styles representing diverse women's experiences — endometriosis, infertility, menopause, choice. Each story rendered in a unique visual approach: 2D cell, stop-frame, oil-on-glass. Directed by Nisha Ganatra, animated by Framestore.</p>
+        <span class="campaign-award">4x Grand Prix — Cannes</span>
+      </div>
+      <div class="campaign-item">
+        <div class="campaign-year">2024</div>
+        <h3>#NeverJustAPeriod</h3>
+        <p>Global campaign highlighting the gap between expectations and reality of menstrual experiences. Educational and validating — acknowledges the lifetime of confusion from first to last period.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DESIGN IMPLICATIONS -->
+  <div class="section">
+    <div class="section-label">07 — For the App</div>
+    <div class="section-title">Design Implications</div>
+    <div class="section-desc">How to translate the brand language into the Libresse app design.</div>
+    <div class="implications-grid">
+      <div class="implication-card">
+        <div class="implication-num">1</div>
+        <div>
+          <h4>Bold cerise as hero color</h4>
+          <p>Use #E31D94 for primary CTAs, important actions, accent elements. Don't soften it — the boldness signals confidence.</p>
+        </div>
+      </div>
+      <div class="implication-card">
+        <div class="implication-num">2</div>
+        <div>
+          <h4>Generous whitespace</h4>
+          <p>The brand values clarity over busyness. Give content breathing room — communicates "we're not ashamed of this topic."</p>
+        </div>
+      </div>
+      <div class="implication-card">
+        <div class="implication-num">3</div>
+        <div>
+          <h4>Clear type hierarchy</h4>
+          <p>Single modern sans-serif family. Strong visual hierarchy so the educational mission communicates clearly.</p>
+        </div>
+      </div>
+      <div class="implication-card">
+        <div class="implication-num">4</div>
+        <div>
+          <h4>Diverse, realistic imagery</h4>
+          <p>Represent diverse bodies and experiences in any photography or illustration. Normalize, don't sanitize.</p>
+        </div>
+      </div>
+      <div class="implication-card">
+        <div class="implication-num">5</div>
+        <div>
+          <h4>Conversational, empowering copy</h4>
+          <p>Avoid clinical language. Be direct, use real words, break taboos through language choices in the app.</p>
+        </div>
+      </div>
+      <div class="implication-card">
+        <div class="implication-num">6</div>
+        <div>
+          <h4>Animation for storytelling</h4>
+          <p>Use diverse animation styles for educational/onboarding content. Inspired by the Womb Stories approach.</p>
+        </div>
+      </div>
+      <div class="implication-card">
+        <div class="implication-num">7</div>
+        <div>
+          <h4>Don't apologize for the topic</h4>
+          <p>The app should reflect the same confidence as the brand. No muted colors, no clinical layouts, no softening.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOURCES -->
+  <div class="footer">
+    <p>Sources: <a href="https://brandfetch.com/libresse.com">Brandfetch</a> · <a href="https://www.libresse.com">libresse.com</a> · <a href="https://www.thedrum.com">The Drum</a> · <a href="https://www.framestore.com/work/wombstories">Framestore</a> · <a href="https://www.creativeboom.com">Creative Boom</a></p>
+    <p style="margin-top:8px;">AI-assisted brand research — March 2026</p>
+  </div>
+
+</div>
+</body>
+</html>
