@@ -104,6 +104,24 @@ Verify:
 - The scope matches — no over-engineering, no missing pieces
 - QA report exists if required (`docs/qa/TASK-XXX-report.md`)
 
+## Step 2.5: Check Devlog for Learnings
+
+Check if the developer has recorded learnings for this PR:
+
+```bash
+# Get PR number
+PR_NUM=$(gh pr view --json number -q .number 2>/dev/null)
+
+# Check if learnings exist for this PR
+grep -q "### PR-$PR_NUM" docs/devlog.md
+```
+
+If no learnings entry exists, note this as a **minor** finding (not blocking):
+```
+The devlog has no learnings recorded for this PR.
+Consider documenting insights before merging: /devlog learn "your reflection"
+```
+
 ## Step 3: Produce the Review
 
 Output a structured review with:
@@ -134,6 +152,7 @@ Call out things done well — clean abstractions, good test coverage, clear nami
 - [ ] Style/conventions followed
 - [ ] Task acceptance criteria met (if applicable)
 - [ ] QA gate passed (if applicable)
+- [ ] Devlog learnings recorded (encouraged)
 
 ## Step 4: Post the Review (if PR)
 

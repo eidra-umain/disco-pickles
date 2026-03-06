@@ -2,11 +2,258 @@
 name: github
 description: |
   Full Git and GitHub workflow skill — branching, commits, PRs, merges, rebasing, and conflict resolution using the `gh` CLI and `git`. Use this skill whenever the user asks to create a branch, open a PR, merge changes, rebase, resolve conflicts, check PR status, manage releases, or do anything involving git operations in a repository. Also trigger when the user references task IDs (like TASK-001) and wants to start working on them, since that implies branch creation and workflow setup. If the user says "start working on TASK-X", "ship this", "open a PR", "merge", "rebase", or mentions branches in any way, use this skill.
+
+  ALSO trigger this skill when users use beginner-friendly language like: "save my work", "sync", "backup", "upload to cloud", "share my progress", "let others see my work", "save to GitHub", "push my changes", "update the cloud", or any variation suggesting they want to preserve or share their work without knowing Git terminology.
 ---
 
 # GitHub Workflow
 
 This skill handles the full Git + GitHub lifecycle: branching, committing, pushing, opening PRs, merging, rebasing, and resolving conflicts. It auto-detects conventions from the repo rather than imposing its own.
+
+---
+
+## Beginner-Friendly Operations
+
+These operations are for users who don't know Git. When they use casual language like "save my work", "sync", "backup", or "share progress", use these simplified workflows. **Always explain what you're doing in plain language** — avoid Git jargon unless explaining it.
+
+### Step 0: Check Project Rules First
+
+**Before any save/sync/share operation**, check if this project has specific Git rules. This prevents accidentally violating project conventions.
+
+```bash
+# Check for project-specific Git rules
+cat CLAUDE.md 2>/dev/null | grep -iE "(push|PR|pull request|branch|main|master)" | head -10
+cat CONTRIBUTING.md 2>/dev/null | grep -iE "(push|PR|pull request|branch|main|master)" | head -10
+cat .github/CONTRIBUTING.md 2>/dev/null | grep -iE "(push|PR|pull request|branch|main|master)" | head -10
+```
+
+Look for phrases like:
+- "no direct pushes to main"
+- "always create PRs"
+- "require pull request"
+- "branch naming: ..."
+
+**Store this context** and use it to decide:
+- `requires_pr`: true if direct pushes to main/master are forbidden
+- `branch_convention`: the naming pattern if one exists (e.g., `feature/TASK-XXX-description`)
+
+If no rules are found, assume direct push is allowed (simpler for beginners on personal projects).
+
+### Save My Work / Sync to Cloud
+
+When the user says things like "save my work", "sync", "backup to cloud", "upload my changes", or "save to GitHub":
+
+1. **Run Step 0** to check project rules first.
+
+2. Check what's changed and the current state:
+   ```bash
+   git status
+   git branch --show-current
+   git log --oneline -1
+   ```
+
+3. If there are changes to save, explain what files changed in plain terms:
+   > "I found 3 files you've changed: `app.py`, `README.md`, and a new file `config.json`. I'll save these to the cloud."
+
+4. **Determine if branching is needed:**
+
+   **If on main/master AND `requires_pr` is true:**
+   
+   Create a branch automatically before saving:
+   ```bash
+   # Generate branch name: save/<date>-<brief-description>
+   git checkout -b save/$(date +%Y-%m-%d)-<brief-description-of-changes>
+   ```
+   
+   Explain to the user:
+   > "This project requires changes to go through review before they're added to the main project. I'll save your work on a separate branch so you don't lose anything."
+
+   **If already on a feature branch OR `requires_pr` is false:**
+   
+   Continue without creating a new branch.
+
+5. Save everything (stage and commit):
+   ```bash
+   git add -A
+   git commit -m "Save progress: <brief description of what changed>"
+   ```
+   Use a simple, descriptive message. If task IDs are used in the repo, include them.
+
+6. Upload to the cloud:
+   ```bash
+   git push -u origin $(git branch --show-current)
+   ```
+
+7. If push fails due to remote changes, pull first and retry:
+   ```bash
+   git pull --rebase
+   git push
+   ```
+
+8. Confirm success in plain language:
+
+   **If on main (and direct push allowed):**
+   > "Done! Your work is now saved to the cloud. Anyone with access to this project can see your latest changes."
+
+   **If on a branch (because PRs are required):**
+   > "Done! Your work is saved to the cloud on a separate branch. When you're ready to share it with the team, just say 'share my progress' and I'll create a review request."
+
+### Share My Progress / Let Others See My Work
+
+When the user wants to share their work or let teammates see what they've done:
+
+1. **Run Step 0** to check project rules first.
+
+2. First, save any unsaved work (use the "Save My Work" flow above, which will handle branching if needed)
+
+3. Check if we're on a branch or main:
+   ```bash
+   git branch --show-current
+   ```
+
+4. **If on main AND `requires_pr` is true:**
+
+   Don't push to main. Instead, create a branch and PR:
+   ```bash
+   # Create branch for sharing
+   git checkout -b save/$(date +%Y-%m-%d)-<brief-description>
+   git push -u origin $(git branch --show-current)
+   
+   # Create PR
+   gh pr create --title "Work in progress: <description>" --body "Sharing my progress for feedback."
+   ```
+   
+   Explain:
+   > "This project requires changes to be reviewed before adding to the main project. I've created a review request so your teammates can see your work and leave comments."
+   
+   Provide the PR link.
+
+5. **If on main AND `requires_pr` is false:**
+
+   Their work is already visible after pushing. Explain:
+   > "Your changes are now on the main project. Everyone with access can see them!"
+
+6. **If already on a branch:**
+
+   Push the branch and offer to create a Pull Request:
+   ```bash
+   git push -u origin $(git branch --show-current)
+   gh pr create --title "Work in progress: <description>" --body "Sharing my progress for feedback."
+   ```
+   Then provide the PR link:
+   > "I've created a link you can share: <PR URL>. Others can see your work and leave comments there."
+
+7. If they just want a quick link to share (no PR needed):
+   ```bash
+   # Get the repo URL and current branch
+   gh repo view --json url -q '.url'
+   git branch --show-current
+   ```
+   > "You can share this link: <repo-url>/tree/<branch-name> — it shows your current work."
+
+### Get Latest Changes / Update My Copy
+
+When the user says "get latest", "update", "sync down", "download changes", or "what did others change":
+
+1. Save any local work first (if there are changes):
+   ```bash
+   git stash --include-untracked
+   ```
+
+2. Get the latest from the cloud:
+   ```bash
+   git pull
+   ```
+
+3. Restore their work on top:
+   ```bash
+   git stash pop
+   ```
+   If this causes conflicts, handle them gently (see "When Things Conflict" below).
+
+4. Explain what happened:
+   > "I've updated your copy with the latest changes from the cloud. You now have everyone's recent work."
+
+### What Changed? / Show Me the History
+
+When the user wants to see what's been happening:
+
+1. Show recent activity in plain terms:
+   ```bash
+   git log --oneline --all -10
+   ```
+
+2. Translate this into plain language:
+   > "Here's what's happened recently:
+   > - 2 hours ago: Sarah added the login page
+   > - Yesterday: You fixed the header bug
+   > - 2 days ago: Mike updated the database settings"
+
+3. If they want to see their own unsaved changes:
+   ```bash
+   git diff --stat
+   ```
+   > "You have changes in 2 files that haven't been saved to the cloud yet."
+
+### When Things Conflict
+
+If Git reports conflicts, don't panic the user. Explain simply:
+
+> "It looks like someone else changed the same file you were working on. Let me help sort this out."
+
+1. Show which files have conflicts:
+   ```bash
+   git diff --name-only --diff-filter=U
+   ```
+
+2. For each file, explain the situation:
+   > "In `app.py`, you changed line 42, but someone else also changed that line. Here's what each version looks like..."
+
+3. Ask the user which version they want, or offer to combine them:
+   > "Would you like to keep your version, their version, or should I try to combine both?"
+
+4. After resolving, complete the operation:
+   ```bash
+   git add <file>
+   git rebase --continue  # or git commit if merging
+   git push
+   ```
+
+5. Confirm:
+   > "All sorted! Your work is now saved and up to date with everyone else's changes."
+
+### Undo My Last Change / Go Back
+
+When the user wants to undo something:
+
+1. **If they haven't saved yet** (undo local edits):
+   > "I'll restore the files to how they were before your recent edits."
+   ```bash
+   git checkout -- <file>  # or git restore <file>
+   ```
+
+2. **If they just saved but haven't synced** (undo last commit):
+   > "I'll undo your last save, but keep your files as they are so you can make different changes."
+   ```bash
+   git reset --soft HEAD~1
+   ```
+
+3. **If they already synced to cloud** — be careful here:
+   > "Your changes are already on the cloud. Undoing them would affect anyone who's already seen them. Are you sure? I can create a new save that reverses the changes instead."
+
+   If they confirm, use a revert (safer than force push):
+   ```bash
+   git revert HEAD --no-edit
+   git push
+   ```
+
+---
+
+## Advanced Git Operations
+
+The sections below are for users comfortable with Git terminology, or when the beginner flows above need more precision.
+
+---
 
 ## Step 0: Detect Repo Conventions
 
@@ -59,6 +306,12 @@ When the user wants to start work on something:
    git push -u origin <branch-name>
    ```
 
+5. **Log to devlog:** Add an entry to `docs/devlog.md`:
+   ```markdown
+   - `HH:MM` [<branch-name>] Branch created from main
+   ```
+   If the devlog file doesn't exist, create it first (see devlog skill for template).
+
 Tell the user what branch was created and that it's tracking the remote.
 
 ## Committing Changes
@@ -91,6 +344,12 @@ When the user wants to commit:
    git push
    ```
 
+6. **Log to devlog:** After each commit, add an entry to `docs/devlog.md`:
+   ```markdown
+   - `HH:MM` [context] COMMIT: <short-hash> — <commit message>
+   ```
+   Where `[context]` is the PR number if one exists, otherwise the branch name.
+
 ## Opening a Pull Request
 
 Use the `gh` CLI for PR operations. Before opening:
@@ -106,6 +365,12 @@ If there's a PR template, populate its sections. If the repo links PRs to issues
 
 For the PR title, match the style of recent merged PRs in the repo.
 
+4. **Log to devlog:** After creating the PR, add an entry to `docs/devlog.md`:
+   ```markdown
+   - `HH:MM` [PR-XXX] PR opened: <title>
+   ```
+   Also update any recent entries that used the branch name as context to use the PR number instead.
+
 ## Merging
 
 When the user wants to merge:
@@ -116,7 +381,14 @@ When the user wants to merge:
    gh pr checks
    ```
 
-2. If checks pass and it's approved, merge using the repo's preferred strategy:
+2. **Check devlog for learnings:** Before merging, check if the Learnings section in `docs/devlog.md` has an entry for this PR. If not, remind the user:
+   ```
+   The devlog has no learnings recorded for PR-XXX.
+   Consider adding insights before merging: /devlog learn "your reflection"
+   ```
+   This is a **warning only** — do not block the merge.
+
+3. If checks pass and it's approved, merge using the repo's preferred strategy:
    ```bash
    # Check what merge strategies the repo tends to use
    gh pr list --state merged --limit 5 --json mergeCommit,title
@@ -125,7 +397,12 @@ When the user wants to merge:
    gh pr merge --squash   # or --merge or --rebase depending on convention
    ```
 
-3. Clean up the branch after merge:
+4. **Log to devlog:** After merging, add an entry:
+   ```markdown
+   - `HH:MM` [PR-XXX] Merged into main
+   ```
+
+5. Clean up the branch after merge:
    ```bash
    git checkout main && git pull
    git branch -d <branch-name>

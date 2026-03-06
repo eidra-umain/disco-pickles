@@ -1,0 +1,15 @@
+{
+  "skill_name": "wireframe-pencil",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create low-fi wireframes for the Libresse app based on the design spec in design/design-spec.md. Start with the Home Dashboard and Daily Log screens.",
+      "expected_output": "Two mobile wireframes (393x852) in a .pen file: Home Dashboard with cycle ring, phase banner, nudge card, quick log button, and upcoming strip; Daily Log with flow selector, mood picker, symptom tags, and save button. Grayscale only."
+    },
+    {
+      "id": 2,
+      "prompt": "Wireframe the main navigation flow for the Libresse app — all four tab screens (Home, My Cycle, Shop, Assistant) with a bottom tab bar.",
+      "expected_output": "Four mobile screens with consistent bottom tab bar, each showing the primary content layout for its section. Arranged on canvas in a logical group."
+    }
+  ]
+}

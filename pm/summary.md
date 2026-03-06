@@ -154,4 +154,13 @@ Produce something **tangible for the client** — a working prototype that demon
 | [Design Spec](../design/design-spec.md) | TODO |
 | [Tech Design](../docs/tech-design.md) | TODO |
 | [Architecture](../docs/architecture.md) | TODO |
-| [Tasks](../tasks.md) | 1 task pending |
+| [Tasks](../tasks.md) | In progress |
+
+---
+
+## Open Questions
+
+- Integration with Apple Health / Google Fit
+- Specific privacy architecture (on-device ML models vs. encrypted cloud)
+- Subscription pricing model
+- Regulatory considerations for health advice in different EU markets

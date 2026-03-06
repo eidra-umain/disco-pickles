@@ -1,0 +1,10 @@
+{
+  "skill_name": "brand-research",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Research the Libresse brand visual language. I need to understand their colors, typography, imagery style, and tone of voice so we can design an app that feels on-brand.",
+      "expected_output": "A structured brand report in design/brand-research-libresse.md with hex colors, font families, imagery observations, tone analysis, and design implications. Should cover their website at minimum."
+    }
+  ]
+}
